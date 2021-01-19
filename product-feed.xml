@@ -1,0 +1,50 @@
+---
+layout: none
+---
+<?xml version="1.0"?>
+<rss version="2.0" xmlns:g="http://base.google.com/ns/1.0">
+<channel>
+<title>{{ site.title }} Product Feed</title>
+<link>{{ site.url }}{{ page.url }}</link>
+<description>List of products available from {{ site.title }}</description>
+{% for product in site.products %}
+<item> 
+  <title>{{ product.title }}</title>
+  <link>{{ site.url }}{{ product.url }}</link>
+  <description>{{ product.description }}</description>
+  <g:description>{{ product.description }}</g:description>
+  <g:image_link>{{ site.url }}{{ product.image }}</g:image_link>
+  <g:id>{{ product.title | downcase | strip | replace: ' ', '-' }}</g:id>
+  <g:availability>in stock</g:availability>
+  <g:price>{{ product.price }} USD</g:price>
+  <g:identifier_exists>no</g:identifier_exists>
+  {% assign category = "Food, Beverages & Tobacco > Beverages > Alcoholic Beverages > Wine" %}
+  <g:google_product_category>{{ category | xml_escape }}</g:google_product_category>
+  <g:tax>
+    <g:country>US</g:country>
+    <g:region>CA</g:region>
+    <g:rate>6.00</g:rate>
+    <g:tax_ship>no</g:tax_ship>
+  </g:tax>
+  <g:tax>
+    <g:country>US</g:country>
+    <g:region>TX</g:region>
+    <g:rate>8.25</g:rate>
+    <g:tax_ship>no</g:tax_ship>
+  </g:tax>
+  <g:shipping>
+    <g:country>US</g:country>
+    <g:region>CA</g:region>
+    <g:service>Ground</g:service>
+    <g:price>24.00 USD</g:price>
+  </g:shipping>
+  <g:shipping>
+    <g:country>US</g:country>
+    <g:region>TX</g:region>
+    <g:service>Ground</g:service>
+    <g:price>25.00 USD</g:price>
+  </g:shipping>
+</item>
+{% endfor %}
+</channel>
+</rss>

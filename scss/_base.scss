@@ -1,0 +1,57 @@
+html,
+body {
+	margin:0;
+	padding:0;
+	overflow-x: hidden;
+	font-family: $body-font;
+	font-size: 16px;
+	color: $text_color;
+}
+* {
+	box-sizing: border-box; 
+}
+//Default Fonts
+h1, h2, h3, h4, h5 {
+	font-family: $header-font;
+	margin-top: 0;
+	margin-bottom: 1rem;
+}
+
+//Links
+a {
+	font-weight: bold;
+	text-decoration: none;
+	color: $primary_color;
+	@include transition(color);
+	&:hover, &:active, &:focus {
+		color: darken($primary_color,15%);
+	}
+}
+
+//Images 
+img {
+	max-width: 100%;
+	height: auto;
+	display: block;
+	margin: auto;
+}
+
+//Form Inputs
+input[type="text"],input[type="email"],input[type="number"],textarea {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	border: 0;
+	&:active, &:focus {
+		outline: 0;
+	}
+	&.submit {
+		white-space: normal;
+	}
+}
+button {
+	box-shadow: none;
+	border: none;
+	&:active, &:focus {
+		outline: 0;
+	}
+}

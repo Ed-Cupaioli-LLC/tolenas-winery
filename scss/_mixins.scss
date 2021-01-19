@@ -1,0 +1,65 @@
+//Default Transition
+@mixin transition($prop...) {
+	-webkit-transition-property: $prop;
+	-moz-transition-property: $prop;
+	-o-transition-property: $prop;
+	transition-property: $prop;
+	-webkit-transition-duration: $transition_duration;
+	-moz-transition-duration: $transition_duration;
+	-o-transition-duration: $transition_duration;
+	transition-duration: $transition_duration;
+	-webkit-transition-timing-function: ease;
+	-moz-transition-timing-function: ease;
+	-o-transition-timing-function: ease;
+	transition-timing-function: ease;
+}
+//Transform
+@mixin transform($prop...) {
+	-webkit-transform: $prop;
+	-moz-transform: $prop;
+	transform: $prop;
+}
+//Headings
+@mixin headings($from: 1, $to: 6){
+    @for $i from $from through $to{
+      h#{$i}{
+        @content
+      }
+    }
+}
+//box shadow
+$default-shadow: 0px 3px 5px rgba(100, 100, 100, 0.5);
+@mixin box-shadow($prop: $default-shadow) {
+  -webkit-box-shadow: $prop;
+  -moz-box-shadow: $prop;
+  box-shadow: $prop;
+}
+//Breakpoints for mobile
+@mixin bp-x-large {
+  @media only screen and (max-width: $size-x-large) {
+    @content;
+  }
+}
+
+@mixin bp-large {
+  @media only screen and (max-width: $size-large) {
+    @content;
+  }
+}
+
+@mixin bp-medium {
+  @media only screen and (max-width: $size-medium) {
+    @content;
+  }
+}
+
+@mixin bp-small {
+  @media only screen and (max-width: $size-small) {
+    @content;
+  }
+}
+@mixin bp-custom($size-custom) {
+  @media only screen and (max-width: $size-custom) {
+    @content;
+  }
+}
