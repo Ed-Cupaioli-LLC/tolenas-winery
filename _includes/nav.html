@@ -1,0 +1,23 @@
+<nav>
+  <div class="nav-menu">
+    <div class="menu-links">
+      {% for link in site.data.nav-menu.menu %}
+      <div class="link-block">
+        <a class="menu-link" href="{{ link.url }}">{{ link.title }}</a>
+      </div>
+      {% endfor %}
+    </div>
+    <div class="social-links">
+      {% for link in site.data.nav-menu.social %}
+      <a class="social-link" title="{{ link.title }}" href="{{ link.href }}">
+        {{ link.icon }}
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+  <div class="nav-toggle">
+    <div class="toggle-line top"></div>
+    <div class="toggle-line middle"></div>
+    <div class="toggle-line bottom"></div>
+  </div>
+</nav>

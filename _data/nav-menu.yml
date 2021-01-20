@@ -1,0 +1,23 @@
+menu: 
+- title: Story
+  url: /story/
+- title: Shop
+  url: /shop/ 
+- title: Reservations
+  url: /reservation/availability/
+- title: Club
+  url: /club/
+- title: Visit
+  url: /visit/
+- title: Cart
+  url: /cart/
+- title: Login
+  url: /profile/login/
+social: 
+- title: Facebook
+  icon: <i class="fab fa-facebook-f"></i>
+  url: https://www.facebook.com/tolenaswinery/
+- title: Instagram
+  icon: <i class="fab fa-instagram"></i>
+  url: https://www.instagram.com/tolenaswinery/?hl=en
+   
