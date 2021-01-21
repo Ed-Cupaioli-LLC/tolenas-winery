@@ -1,8 +1,8 @@
 //Color Variables
 $black: #000;
 $white: #fff;
-$blue: #3e73cb;
 $gold: #ba8d00;
+$grey: #a7a9ae;
 //Theme colors
 $text_color: $black;
 $primary_color: $gold;
@@ -15,5 +15,6 @@ $size-small: 568px;
 //Transition
 $transition_duration: .5s;
 //Fonts
-$header-font: 'Helvetica', sans-serif;
-$body-font: 'Helvetica', sans-serif;
+$header-font: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
+$body-font: 'Oswald',Helvetica,Arial,Lucida,sans-serif;
+$nav-height: 88px;

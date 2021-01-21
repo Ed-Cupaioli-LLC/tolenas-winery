@@ -1,4 +1,4 @@
-<nav>
+<nav class="{{ page.nav_class }} active">
   <div class="nav-menu">
     <div class="menu-links">
       {% for link in site.data.nav-menu.menu %}
@@ -15,9 +15,14 @@
       {% endfor %}
     </div>
   </div>
+  <a class="nav-logo" href="/">
+    <img src="{{ site.data.nav-menu.logo }}" class="logo-img" />
+  </a>
   <div class="nav-toggle">
-    <div class="toggle-line top"></div>
-    <div class="toggle-line middle"></div>
-    <div class="toggle-line bottom"></div>
+    <div class="toggle-lines">
+      <div class="toggle-line top"></div>
+      <div class="toggle-line middle"></div>
+      <div class="toggle-line bottom"></div>
+    </div>
   </div>
 </nav>

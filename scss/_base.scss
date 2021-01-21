@@ -5,7 +5,10 @@ body {
 	overflow-x: hidden;
 	font-family: $body-font;
 	font-size: 16px;
+	line-height: 1.7em;
 	color: $text_color;
+	letter-spacing: 1px;
+	font-weight: 300;
 }
 * {
 	box-sizing: border-box; 
@@ -15,16 +18,20 @@ h1, h2, h3, h4, h5 {
 	font-family: $header-font;
 	margin-top: 0;
 	margin-bottom: 1rem;
+	font-weight: 400;
+}
+b,strong {
+	font-weight: 500;
 }
 
 //Links
 a {
-	font-weight: bold;
 	text-decoration: none;
-	color: $primary_color;
+	color: inherit;
+	display: inline-block;
 	@include transition(color);
 	&:hover, &:active, &:focus {
-		color: darken($primary_color,15%);
+		
 	}
 }
 
@@ -54,4 +61,8 @@ button {
 	&:active, &:focus {
 		outline: 0;
 	}
+}
+
+main {
+	padding-top: $nav-height;
 }
