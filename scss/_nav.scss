@@ -13,7 +13,12 @@ nav {
   z-index: 10;
   &.scrolled {
     height: 56px;
-     
+    .nav-logo {
+      .logo-img {
+        height: 21px;
+      }
+      
+    }
   }
   &.active {
     .nav-menu {
@@ -90,9 +95,12 @@ nav {
     max-width: 70%;
     .logo-img {
       margin: 0;
-      max-height: 33px;
-      
+      height: 33px;
       width: auto;
+      @include transition(height);
+      @include bp-medium {
+        height: 21px;
+      }
     }
   }
   .nav-toggle {

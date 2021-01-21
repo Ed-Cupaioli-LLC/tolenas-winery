@@ -1,14 +1,20 @@
-<nav class="{{ page.nav_class }} active">
+<nav class="{{ page.nav_class }}">
   <div class="nav-menu">
     <div class="menu-links">
-      {% for link in site.data.nav-menu.menu %}
+      {% for link in site.data.menu.nav %}
       <div class="link-block">
         <a class="menu-link" href="{{ link.url }}">{{ link.title }}</a>
       </div>
       {% endfor %}
+      <div class="link-block">
+        <a class="menu-link" href="{{ site.data.menu.cart }}">Cart</a>
+      </div>
+      <div class="link-block">
+        <a class="menu-link" href="{{ site.data.menu.login }}">Login</a>
+      </div>
     </div>
     <div class="social-links">
-      {% for link in site.data.nav-menu.social %}
+      {% for link in site.data.menu.social %}
       <a class="social-link" title="{{ link.title }}" href="{{ link.href }}">
         {{ link.icon }}
       </a>
@@ -16,7 +22,7 @@
     </div>
   </div>
   <a class="nav-logo" href="/">
-    <img src="{{ site.data.nav-menu.logo }}" class="logo-img" />
+    <img src="{{ site.data.menu.logo }}" class="logo-img" />
   </a>
   <div class="nav-toggle">
     <div class="toggle-lines">

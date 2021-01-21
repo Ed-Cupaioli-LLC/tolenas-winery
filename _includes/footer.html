@@ -1,0 +1,28 @@
+<footer>
+  <div class="footer-body">
+    <div class="footer-col left">
+      <a href="/">
+        <img src="{{ site.data.menu.logo }}" class="logo" />
+      </a>
+      <div class="address">{{ site.data.menu.address }}</div>
+      <div class="copyright">&copy; {{ site.time | date: "%Y" }} {{ site.title }}</div>
+    </div>
+    <div class="footer-col right">
+      <div class="nav-links">
+        {% for link in site.data.menu.nav %}
+        <a href="{{ link.url }}" class="nav-link">{{ link.title }}</a>
+        {% endfor %}
+      </div>
+      <div class="terms">
+        <a class="terms-link" href="{{ site.data.menu.terms }}">Privacy & Terms</a>
+      </div>
+      <div class="social-links">
+        {% for link in site.data.menu.social %}
+        <a class="social-link" title="{{ link.title }}" href="{{ link.href }}">
+          {{ link.icon }}
+        </a>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</footer>

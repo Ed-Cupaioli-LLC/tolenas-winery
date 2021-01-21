@@ -1,4 +1,4 @@
-menu: 
+nav: 
 - title: Story
   url: /story/
 - title: Shop
@@ -9,10 +9,10 @@ menu:
   url: /club/
 - title: Visit
   url: /visit/
-- title: Cart
-  url: /cart/
-- title: Login
-  url: /profile/login/
+cart: /cart/
+login: /profile/login/
+terms: /terms/
+address: 4185 CHADBOURNE RD., FAIRFIELD CA, 94534
 social: 
 - title: Facebook
   icon: <i class="fab fa-facebook-f"></i>
@@ -20,4 +20,5 @@ social:
 - title: Instagram
   icon: <i class="fab fa-instagram"></i>
   url: https://www.instagram.com/tolenaswinery/?hl=en
-logo: /img/nav-logo.png   
+logo: /img/tolenas-gold.svg   
+ 
