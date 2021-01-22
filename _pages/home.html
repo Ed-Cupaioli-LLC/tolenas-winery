@@ -4,5 +4,82 @@ layout: default
 permalink: /
 css: home
 content-id: home
+slick: true
+scripts: 
+- home
+hero: 
+  title: Family. Focused on quality.
+  links:
+  - title: Email signup
+    url: '#email-signup'
+  - title: Shop
+    url: /shop/
+products: 
+  title: New Releases
+  collection-slug: new-releases
+links:
+- title: Story
+  image: /img/story-card.jpg
+  url: /story/
+- title: Shop
+  image: /img/shop-card.jpg
+  url: /shop/
+- title: Visit
+  image: /img/visit-card.jpg
+  url: /visit/
 ---
-<div id="c7-product-collection" data-collection-slug="red-wine"></div>
+<section id="home-hero">
+  <div class="hero-content">
+    <h1 class="hero-title">{{ page.hero.title }}</h1>
+    <div class="hero-links">
+      {% for link in page.hero.links %}
+      <a class="hero-link" href="{{ link.url }}">{{ link.title }}</a>
+      {% endfor %}
+    </div>
+    <div class="section-scroll">
+      <i class="fa fa-chevron-down"></i>
+    </div>
+  </div>
+</section>
+<section id="product-section" data-collection="{{ page.products.collection-slug }}">
+  <div class="inner-section">
+    <h2>{{ page.products.title }}</h2>
+    <div id="product-slider">
+      
+    </div>
+  </div>
+</section>
+<section id="links-section">
+  <div class="links-grid">
+    {% for link in page.links %}
+    <div class="link-col">
+      <a class="link" href="{{link.url}}" >
+        <h1 class="link-title">{{ link.title }}</h1>
+        <img src="{{ link.image }}" class="link-image" />
+      </a>
+    </div>
+    {% endfor %}
+  </div>
+</section>
+<section id="ig-section">
+  <div class="inner-section">
+    <h2>Follow us on instagram</h2>
+    <div id="ig-slider"></div>
+    <a class="btn" href="https://www.instagram.com/tolenaswinery/"><i class="fab fa-instagram"></i> @tolenaswinery</a>
+    <div class="post-embed-container">
+			
+      <div class="embed-body">
+        <div class="close-embed"><span class="close-x">&times;</span></div>
+        <div class="insta-embed">
+					<div class="image-col">
+						<a class="insta-link" href=""><img  loading="lazy" class="insta-image" src="" alt="" /></a>
+					</div>
+					<div class="text-col">
+						<div class="insta-caption"></div>
+						<a class="insta-link btn" href=""><i class="fab fa-instagram"></i>View on Instagram</a>
+					</div>
+				</div>
+      </div>
+    </div>
+  </div>
+</section>

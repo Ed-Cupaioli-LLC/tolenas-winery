@@ -18,12 +18,12 @@ layout: compress
     {% endif %}
 
     {% include nav.html %}
-    <div id="c7-cart"></div>
+    
     {% if layout.content-id %}
-    {% assign page-id = page.content-id %}
+    {% assign content-id = page.content-id %}
     {% endif %}
     {% if page.content-id %}
-    {% assign page-id = page.content-id %}
+    {% assign content-id = page.content-id %}
     {% endif %}
     <main id="{{ content-id }}">
     {{ content }}
@@ -34,6 +34,9 @@ layout: compress
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <!-- Commerce 7 -->
     <script type="text/javascript" src="https://cdn.commerce7.com/beta/commerce7.js" id="c7-javascript" data-tenant="tolenas-vineyards-and-winery"></script>
+    {% if page.slick == true %}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
+    {% endif %}
     {% if site.age-gate == true %}
     <!-- age gate scripts -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
