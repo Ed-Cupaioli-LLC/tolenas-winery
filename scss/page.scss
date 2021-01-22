@@ -1,6 +1,6 @@
 @import "vars.scss";
 @import "mixins.scss";
-#page {
+main {
   padding-top: $nav-height;
   #hero {
     background-position: center;
@@ -15,9 +15,20 @@
       display: flex;
       height: 100%;
       align-items: flex-end;
+      //overflow: hidden;
     }
     h1 {
       color: $white;
+      opacity: 0;
+      transform: translateY(100%);
+      @include transition(transform,opacity);
+      transition-duration: 0.7s;
+      transition-timing-function: ease-out;
+      margin-bottom: 0;
+      &.active {
+        opacity: 1;
+        transform: translateY(0%);
+      }
     }
   }
   #content {
@@ -25,10 +36,13 @@
       max-width: 950px;
       margin: auto;
     }
-
-    iframe {
-      min-width: 100%;
-      margin: auto;
+    ul,ol {
+      padding-left: 1em;
     }
+    
+      a {
+        color: $gold;
+      }
+    
   }
 }

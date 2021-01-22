@@ -11,28 +11,12 @@ module.exports = function(grunt) {
         }]
       }
     },
-    cwebp: {
-      target: {
-        options: {
-          q: 75
-        },
-        files: [{
-          expand: true,
-          cwd: 'img/',
-          src: ['**/*.{png,jpg,jpeg}'],
-          dest: 'img/'
-        }]
-      }
-    },
     watch: {
       imagemin: {
         files: 'img/*.{png,jpg,gif,jpeg,svg}',
         tasks: ['newer:imagemin:target']
       },
-      cwebp: {
-        files: 'img/*.{png,jpg,jpeg}',
-        tasks: ['newer:cwebp:target']
-      },
+      
       terser: {
         files: ['js/*.js',"js/min/!*.min.js"],
         tasks: ['newer:terser:target']
