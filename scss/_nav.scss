@@ -11,6 +11,36 @@ nav {
   justify-content: space-between;
   @include transition(height);
   z-index: 10;
+  &.home-nav {
+    position: absolute;
+    justify-content: center;
+    background-color: transparent;
+    .nav-logo {
+      align-self: center;
+      position: relative;
+      top: 10px;
+      .logo-img {
+        height: 48px;
+      }
+    }
+    .nav-toggle {
+      position: absolute;
+      background-color: transparent;
+      @include transition(background-color);
+      .toggle-line {
+        background-color: $gold;
+      }
+    }
+    &.active {
+      .nav-toggle {
+        position: absolute;
+        background-color: $black;
+        .toggle-line {
+          background-color: $white;
+        }
+      }
+    }
+  }
   &.scrolled {
     height: 56px;
     .nav-logo {
