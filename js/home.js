@@ -26,7 +26,14 @@ $(function(){
       });
       $('#product-slider').slick({
         slidesToShow: 3,
-        
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       });
     },
     error: function(data) {
@@ -56,7 +63,15 @@ $(function(){
         $('#ig-slider').append(slide);
       });  
       $('#ig-slider').slick({
-        slidesToShow: 3
+        slidesToShow: 3,
+        responsive: [
+          {
+            breakpoint: 768,
+            settings: {
+              slidesToShow: 1
+            }
+          }
+        ]
       });  
       $('.insta-slide').click(function() {
         $('.post-embed-container,body,html').addClass('active');

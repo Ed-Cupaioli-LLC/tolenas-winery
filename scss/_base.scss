@@ -108,6 +108,9 @@ main {
 		}
 		&.slick-prev {
 			left: -40px;
+			@include bp-small {
+				left: -10px;
+			}
 			&:before {
 				content: '\f053';
 				left: 5px;
@@ -115,6 +118,9 @@ main {
 		}
 		&.slick-next {
 			right: -40px;
+			@include bp-small {
+				right: -10px;
+			}
 			&:before {
 				content: '\f054';
 				right: -5px;
@@ -136,4 +142,10 @@ main {
 
 .hidden {
 	display: none;
+}
+
+section {
+	.inner-section {
+		padding: 40px 20px;
+	}
 }

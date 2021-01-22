@@ -41,7 +41,6 @@
     }
   }
   #product-section {
-    padding: 2% 0;
     h2 {
       text-align: center;
       margin-bottom: 2rem;
@@ -96,9 +95,12 @@
   #links-section {
     .links-grid {
       display: flex;
+      flex-flow: row wrap;
       .link-col {
         width: 33.3333%;
-        
+        @include bp-medium {
+          width: 100%;
+        }
         .link {
           position: relative;
           width: 100%;
