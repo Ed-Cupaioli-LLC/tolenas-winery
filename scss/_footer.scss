@@ -5,7 +5,7 @@ footer {
   font-size: 14px;
   line-height: 2;
   @include bp-medium {
-    padding: 36px 0 185px;
+    padding: 36px 0;
   }
   .footer-body {
     max-width: 976px;

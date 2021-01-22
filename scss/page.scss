@@ -1,0 +1,34 @@
+@import "vars.scss";
+@import "mixins.scss";
+#page {
+  padding-top: $nav-height;
+  #hero {
+    background-position: center;
+    background-size: cover;
+    height: 500px;
+    @include bp-medium {
+      height: 330px;
+    }
+    .inner-section {
+      max-width: 1576px;
+      margin: auto;
+      display: flex;
+      height: 100%;
+      align-items: flex-end;
+    }
+    h1 {
+      color: $white;
+    }
+  }
+  #content {
+    .inner-section {
+      max-width: 950px;
+      margin: auto;
+    }
+
+    iframe {
+      min-width: 100%;
+      margin: auto;
+    }
+  }
+}
