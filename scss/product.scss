@@ -1,0 +1,59 @@
+@import "vars.scss";
+@import "mixins.scss";
+.c7-layout__product-detail {
+  #c7-content {
+    .c7-product-detail {
+      flex-direction: row-reverse;
+      @include bp-medium {
+        display: block;
+      }
+      .c7-product-detail__photo {
+        padding-right: 2rem;
+        @include bp-medium {
+          padding-right: 0;
+        }  
+        flex: 1 0 50%;
+        img {
+          max-height: 400px;
+        }
+        .c7-product-detail__photo__thumbs {
+          display: flex;
+          justify-content: center;
+          margin: 1rem -0.5rem 0;
+          a {
+            display: inline-block;
+            height: 62px;
+            width: 62px;
+            margin: 0 0.5rem;
+            overflow: hidden;
+            img {
+              height: 100%;
+              width: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+      .c7-product-detail__info {
+        flex: 1 0 50%;
+
+        @include bp-medium {
+          text-align: left;
+        }
+        h1 {
+          text-align: left;
+        }
+        .c7-product-specs {
+          display: none;
+        }
+
+
+        .c7-product__variant__add-to-cart {
+          justify-content: left;
+        }
+      }
+      
+    }
+    
+  }
+}
