@@ -4,16 +4,26 @@
   overflow: hidden;
   display: flex;
   position: relative;
+  @include bp-large {
+    display: block;
+  }
   #visit-content {
     min-height: 100vh;
     position: relative;
     width: 75%;
     padding: 40px 64px;
-
+    @include bp-large {
+      width: 100%;
+      padding: 170px 20px 20px;
+    }
     .content-section {
       position: absolute;
       opacity: 0;
       background-color: $white;
+      @include bp-large {
+        position: relative;
+        opacity: 1;
+      }
       &.active {
         position: relative;
         opacity: 1;
@@ -24,9 +34,15 @@
         &.map {
           display: flex;
           align-items: center;
+          @include bp-large {
+            display: block;
+          }
           .image-col {
             flex: 1 0 50%;
             padding-right: 2rem;
+            @include bp-large {
+              padding-right: 0;
+            }  
           }
 
         }
@@ -48,16 +64,47 @@
     width: 25%;
     right: 0;
     position: fixed;
+    @include transition(top);
+    @include bp-large {
+      width: 100%;
+      top: $nav-height;
+    }
+    &.scrolled {
+      @include bp-large {
+        top: 56px;
+      }  
+    }
     &.at-footer {
       position: absolute;
       bottom: 0;
       z-index: 5;
+      @include bp-large {
+        position: fixed;
+        bottom: initial;
+      }  
+    }
+    &.open {
+      @include bp-large {
+        .menu-links {
+          .menu-link {
+            height: 100px;
+          }
+          .visit-menu-toggle {
+            i {
+              transform: rotate(180deg);
+            }
+          }
+        }
+      }  
     }
     .menu-links {
       display: flex;
       flex-direction: column;
       height: calc(100vh - #{$nav-height});
-      
+      position: relative;
+      @include bp-large {
+        height: 100%;
+      }
       .menu-link {
         display: block;
         flex: 1 0 auto;
@@ -69,6 +116,13 @@
         position: relative;
         @include transition(transform);
         transform: scale(1);
+        @include bp-large {
+          height: 0;
+          flex: none;
+          overflow: hidden;
+          @include transition(height);
+
+        }
         &:before {
           content: '';
           position: absolute;
@@ -85,6 +139,10 @@
           transform-origin: right center;
           overflow-y: hidden;
           z-index: 2;
+          @include bp-large {
+            height: 150px;
+            transform: scale(1);
+          }
           &:before {
             background-color: rgba($gold,0.7);
           }
@@ -96,7 +154,29 @@
           @include text-shadow;
           position: relative;
           z-index: 2;
-          
+          i {
+            @include bp-large {
+              display: none;
+            }
+          }
+        }
+      }
+      .visit-menu-toggle {
+        position: absolute;
+        bottom: 0;
+        z-index: 5;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: $black;
+        color: $white;
+        line-height: 1;
+        padding:5px;
+        text-align: center;
+        i {
+          position: relative;
+          left: 1px;
+          @include transition(transform);
+          transform-origin: center;
         }
       }
     }
