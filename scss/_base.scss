@@ -165,8 +165,45 @@ section {
 }
 //c7 overrides
 body {
+	&.c7-cart-open {
+		overflow-y: hidden;
+		nav.active .nav-toggle {
+			z-index: 1;
+		}
+	}
 	#c7-cart {
-		position: absolute;
+		& > a {
+			color: $white;
+			position: relative;
+			&:hover {
+				text-decoration: none;
+				.c7-cart__count {
+					color: $white;
+				}
+			}
+			.c7-cart__count {
+				background-color: $black;
+				height: 1.5em;
+				width: 1.5em;
+				display: inline-block;
+				border-radius: 50%;
+				font-size: 16px;
+				vertical-align: middle;
+				line-height: 1.4;
+				position: absolute;
+    		top: 4px;
+    		right: -1.75em;
+			}
+			.c7-cart__total {
+				display: none;
+			}
+		}
+		.c7-cart {
+			width: 500px;
+			@include bp-medium {
+				width: 100%;
+			}
+		}
 	}
 	.c7-reservation-widget .c7-form__group {
 		align-items: flex-end;

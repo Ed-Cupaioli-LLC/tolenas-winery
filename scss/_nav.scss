@@ -99,7 +99,7 @@ nav {
           color: $white;
           padding: 9.5px 0;
           font-size: 19px;
-          &:active {
+          &:active,&:hover {
             color: $black;
           }
         }
