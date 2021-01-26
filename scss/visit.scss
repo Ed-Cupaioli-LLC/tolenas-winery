@@ -120,6 +120,7 @@
           height: 0;
           flex: none;
           overflow: hidden;
+          transform: none;
           @include transition(height);
 
         }
@@ -141,7 +142,7 @@
           z-index: 2;
           @include bp-large {
             height: 150px;
-            transform: scale(1);
+            transform: none;
           }
           &:before {
             background-color: rgba($gold,0.7);

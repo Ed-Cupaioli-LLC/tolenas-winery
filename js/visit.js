@@ -8,7 +8,7 @@ $(function (){
     $('.menu-link.active').removeClass('active');
     $(this).addClass('active');
     $('#visit-menu').removeClass('open');
-    const offsetTop;
+    var offsetTop;
     if ($(window).width() <= 1024) {
       offsetTop = 150;
       
@@ -37,4 +37,29 @@ $(function (){
   $('.visit-menu-toggle').click(function () {
     $('#visit-menu').toggleClass('open')
   });
+  
+  
+  if ($(window).width() < 1024) {
+    $(window).on('resize scroll', function() {
+      
+      $('.content-section').each(function(i,obj) {
+        if ($(this).isInViewport()) {
+          var sectionId = $(this).attr('id');
+          
+          $('.menu-link').removeClass('active');
+          $('.menu-link[href="#'+sectionId+'"]').addClass('active');
+        }
+      });
+    });
+  }
 });
+
+$.fn.isInViewport = function() {
+  var elementTop = $(this).offset().top;
+  var elementBottom = elementTop + $(this).outerHeight();
+
+  var viewportTop = $(window).scrollTop();
+  var viewportBottom = viewportTop + $(window).height();
+
+  return elementBottom > viewportTop && elementTop < viewportBottom;
+};
