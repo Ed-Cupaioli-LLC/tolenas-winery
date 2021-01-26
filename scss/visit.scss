@@ -1,0 +1,104 @@
+@import "vars.scss";
+@import "mixins.scss";
+#visit {
+  overflow: hidden;
+  display: flex;
+  position: relative;
+  #visit-content {
+    min-height: 100vh;
+    position: relative;
+    width: 75%;
+    padding: 40px 64px;
+
+    .content-section {
+      position: absolute;
+      opacity: 0;
+      background-color: $white;
+      &.active {
+        position: relative;
+        opacity: 1;
+        @include transition(opacity);
+      }
+      .content-block{
+        margin-bottom: 3rem;
+        &.map {
+          display: flex;
+          align-items: center;
+          .image-col {
+            flex: 1 0 50%;
+            padding-right: 2rem;
+          }
+
+        }
+        .text-col {
+          .block-title {
+            font-weight: 400;
+          }
+        }
+        .image-col {
+          .block-image {
+            margin: 0 0 2rem;
+          }
+        }
+      } 
+
+    }
+  }
+  #visit-menu {
+    width: 25%;
+    right: 0;
+    position: fixed;
+    &.at-footer {
+      position: absolute;
+      bottom: 0;
+      z-index: 5;
+    }
+    .menu-links {
+      display: flex;
+      flex-direction: column;
+      height: calc(100vh - #{$nav-height});
+      
+      .menu-link {
+        display: block;
+        flex: 1 0 auto;
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        @include transition(transform);
+        transform: scale(1);
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 100%;
+          top: 0;
+          left: 0;
+          background-color: rgba($black,0.3);
+          @include transition(background-color);
+          z-index: 1;
+        }
+        &.active {
+          transform: scale(1.03);
+          transform-origin: right center;
+          overflow-y: hidden;
+          z-index: 2;
+          &:before {
+            background-color: rgba($gold,0.7);
+          }
+        }
+        .link-title {
+          color: $white;
+          text-transform: uppercase;
+          margin-bottom: 0;
+          @include text-shadow;
+          position: relative;
+          z-index: 2;
+          
+        }
+      }
+    }
+  }
+}

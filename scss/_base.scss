@@ -135,7 +135,7 @@ main {
 		outline: none;
 	}	
 }
-.btn,button.c7-button {
+.btn,button.c7-button, a.c7-button {
 	text-transform: uppercase;
 	background-color: $black;
 	color: $gold;
@@ -177,5 +177,9 @@ body {
 	}
 	.c7-form select, .c7-form input[type='text'], .c7-form input[type='email'], .c7-form input[type='tel'], .c7-form input[type='password'], .c7-form input[type='username'], .c7-form .c7-input-sudo {
 		font-family: inherit;
+	}
+	#c7-checkout-content {
+		z-index: 9 !important;
+		margin-top: $nav-height !important;
 	}
 }

@@ -1,0 +1,17 @@
+@import "vars.scss";
+@import "mixins.scss";
+#c7-content {
+  h1 {
+    display: none;
+  }
+  .c7-club-list {
+    .c7-club-list__item {
+      justify-content: center;
+      .c7-club-list__item__image {
+        display: none;
+      }
+      
+    }
+    
+  }
+}
