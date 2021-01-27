@@ -148,8 +148,9 @@ main {
 	font-family: inherit;
 	line-height: inherit;
 	@include transition(color);
-	&:hover {
+	&:hover,&:active, &:focus {
 		border: none;
+		color: $white;
 	}
 }
 
