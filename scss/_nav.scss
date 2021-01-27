@@ -15,19 +15,26 @@ nav {
     position: absolute;
     justify-content: center;
     background-color: transparent;
-    .nav-logo {
-      align-self: center;
-      position: relative;
-      top: 10px;
+    @include bp-small {
+      justify-content: space-between;
+    }
+    .nav-col.right {
+      
+      position: absolute;
+      top: 20px;
+      right: 40px;
+
       @include bp-small {
-        top: 2px;
+        top: 0;
+        right: 0;
+        position: relative;
       }  
       .logo-img {
         height: 48px;
       }
     }
     .nav-toggle {
-      position: absolute;
+      
       background-color: transparent;
       @include transition(background-color);
       @include bp-small {
@@ -39,7 +46,7 @@ nav {
     }
     &.active {
       .nav-toggle {
-        position: absolute;
+        
         background-color: $black;
         .toggle-line {
           background-color: $white;
@@ -139,15 +146,21 @@ nav {
       }
     }
   }
+  .nav-col {
+    &.right {
+      display: flex;
+      align-items: center;
+    }
+  }
   .nav-toggle {
-    position: fixed;
+    position: relative;
     background-color: $black;
     width: 40px;
     height: 40px;
-    right: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
+    
     .toggle-line {
       background-color: $white;
       height: 3px;
@@ -161,3 +174,59 @@ nav {
     }
   }
 }
+//cart
+body {
+	&.c7-cart-open {
+		overflow-y: hidden;
+		nav.active .nav-toggle {
+			z-index: 1;
+		}
+		#c7-cart {
+			
+		}	
+	}
+	#c7-cart {
+		& > a {
+			color: $gold;
+      position: relative;
+      margin-right: 2rem;
+      top: 5px;
+			&:hover {
+				text-decoration: none;
+				.c7-cart__count {
+					color: $white;
+				}
+      }
+      &:before {
+        content: '\f07a';
+        font-family: "Font Awesome 5 Free"; 
+        font-weight: 900;
+        font-size: 28px;
+      }
+			.c7-cart__count {
+				background-color: $black;
+				height: 20px;
+        width: 20px;
+        font-size: 14px;
+        color: $white;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+				border-radius: 50%;
+				vertical-align: middle;
+				position: absolute;
+    		top: -10px;
+    		right: -10px;
+			}
+			.c7-cart__total {
+				display: none;
+			}
+		}
+		.c7-cart {
+			width: 500px;
+			@include bp-medium {
+				width: 100%;
+			}
+		}
+  }
+}  

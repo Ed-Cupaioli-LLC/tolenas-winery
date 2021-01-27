@@ -7,7 +7,7 @@
       </div>
       {% endfor %}
       <div class="link-block">
-        <div id="c7-cart" class="menu-link"></div>
+        <a class="menu-link" href="{{ site.data.menu.cart }}">Cart</a>
       </div>
       <div class="link-block">
         <a class="menu-link" href="{{ site.data.menu.login }}">Login</a>
@@ -24,11 +24,15 @@
   <a class="nav-logo" href="/">
     <img src="{{ site.data.menu.logo }}" class="logo-img" />
   </a>
-  <div class="nav-toggle">
-    <div class="toggle-lines">
-      <div class="toggle-line top"></div>
-      <div class="toggle-line middle"></div>
-      <div class="toggle-line bottom"></div>
+  <div class="nav-col right">
+    <div id="c7-cart"></div>
+    <div class="nav-toggle">
+      <div class="toggle-lines">
+        <div class="toggle-line top"></div>
+        <div class="toggle-line middle"></div>
+        <div class="toggle-line bottom"></div>
+      </div>
     </div>
   </div>
+  
 </nav>
