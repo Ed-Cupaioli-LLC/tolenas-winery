@@ -1,0 +1,16 @@
+@import "vars.scss";
+@import "mixins.scss";
+#cart-page {
+  .c7-cart__summary {
+    .c7-cart__summary__message {
+      a {
+        color: $gold;
+      }
+    }
+  }
+  .c7-cart-items__title {
+    a {
+      color: $gold;
+    }
+  }
+}

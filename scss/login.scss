@@ -1,0 +1,16 @@
+@import "vars.scss";
+@import "mixins.scss";
+#login {
+  min-height: 100vh;
+  
+
+  #c7-login-form {
+    max-width: $size-small;
+    margin: auto;
+    p {
+      a {
+        color: $gold;
+      }
+    }
+  }
+}
