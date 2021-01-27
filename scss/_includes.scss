@@ -7,12 +7,16 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: $primary-color;
+  background-color: $black;
   color: $secondary-color;
   height: 100%;
   width: 100%;
   top: 0;
   left: 0;
+  background-image: url('/img/tolenas-splash.jpg');
+  background-size: cover;
+  background-position: center;
+  
   &.active {
     transform: translateY(0%);  
     z-index: 9999;
@@ -20,10 +24,61 @@
   }
   .gate-content {
     text-align: center;
-    .gate-btn {
-      background-color: $secondary-color;
-      color: $primary-color;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+    .logo {
+      img {
+        width: 460px;
+      }
+      
     }
+    p {
+      font-size: 18px;
+    }
+    .gate-btn {
+      background-color: $primary-color;
+      color: $secondary-color;
+      margin: 0;
+      &:hover {
+        color: $black;
+      }
+    }
+    
+  }
+  .bg-video {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-color: rgba($black,0.3);
+      z-index: 2;
+    }
+    iframe {
+      width: 100vw;
+      height: 56.25vw; 
+      min-height: 100vh;
+      min-width: 177.77vh; 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      
+    }
+  }
+  .email-signup {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 3;
   }
 }
 .video-embed {
@@ -37,3 +92,58 @@
     height: 100%;
   }
 }
+
+.email-signup {
+  background-color: $gold; 
+  .subscribe-form {
+    max-width: $size-medium;
+    margin: auto;
+    padding: 0.5rem 0;
+    @include bp-medium {
+      padding: 1rem 0;
+    }  
+    .form-body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      @include bp-medium {
+        flex-direction: column;
+        text-align: center;
+      }
+      .form-title {
+        text-transform: uppercase;
+        color: $white;
+      }
+      .form-field {
+        padding: 0.5rem;
+        &.submit-field {
+          .btn {
+            font-size: 14px;
+            line-height: 1em;
+            padding: 0.5rem 1rem;
+            height: 37px;
+            margin: 0;
+          }
+        }
+        &.input-field {
+          input {
+           font-size: 14px;
+           padding: 0.5rem 1rem;
+           border: none;
+           min-width: 250px;
+           &::placeholder {
+             text-transform: uppercase;
+             font-weight: inherit;
+             }
+           }
+         }
+       }
+     }
+    .result-msg {
+     padding: 0.5rem; 
+     text-align: center;
+     color: $white;
+     display: none;
+    }
+  }
+ }

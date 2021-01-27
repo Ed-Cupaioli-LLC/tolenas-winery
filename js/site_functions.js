@@ -10,9 +10,9 @@ $(function(){
     $('nav').toggleClass('active');
   });
   //signup form
-  $('#subscribe-form').submit(function(e) {
+  $('.subscribe-form').submit(function(e) {
     e.preventDefault();
-    const email = jQuery('#email').val()
+    const email = $(this).find('.email').val()
     const emailSub = {
       "email": email
     };
@@ -26,16 +26,16 @@ $(function(){
       data: JSON.stringify(emailSub),
       type: 'POST',
       success: function(data) {
-        $('#subscribe-form .result-msg').text('Thanks for signing up!');
-        $('#subscribe-form .form-body').slideUp();
+        $(this).find('.result-msg').text('Thanks for signing up!');
+        $(this).find('.form-body').slideUp();
       },
       error: function(data) {
         var errorData = $.parseJSON(data.responseText);
         var errors = errorData.errors;
         $(errors).each(function(i,err) {
           
-          $('#subscribe-form .result-msg').text(err.message);
-          $('#subscribe-form .result-msg').slideDown();
+          $(this).find('.result-msg').text(err.message);
+          $(this).find('.result-msg').slideDown();
         });
       }
       
