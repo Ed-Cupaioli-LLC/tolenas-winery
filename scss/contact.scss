@@ -1,0 +1,25 @@
+@import "mixins.scss"; 
+@import "vars.scss";
+#contact {
+  min-height: 100vh;
+  #contact-form {
+    .form-field {
+      &:not(:last-child) {
+        margin-bottom: 1rem;
+      }
+      .form-input {
+        border: 1px solid $grey;
+        display: block;
+        min-width: 250px;
+        max-width: 100%;
+        padding: 0.5rem;
+      }
+      textarea {
+        height: 150px;
+      }
+    }
+    .form-success {
+      display: none;
+    }
+  }
+}
