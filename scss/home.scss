@@ -150,7 +150,7 @@
   }
   #ig-section {
     //background-color: $grey;
-    padding: 46px 0 56px;
+    padding: 46px 20px 56px;
     .inner-section {
       text-align: center;
       h2 {
@@ -167,6 +167,9 @@
         .slide-content {
           width: 330px;
           padding: 0 0.5rem;
+          @include bp-small {
+            width: 100%;
+          }
         }
         .slide-img {
           
