@@ -44,7 +44,7 @@ $(function(){
   $.ajax({
     url: 'https://www.instagram.com/graphql/query/?query_hash=472f257a40c653c64c666ce877d59d2b&variables={%22id%22:%227741927326%22,%22first%22:12}',
     type: 'GET',
-    dataType: 'JSON',
+    dataType: 'json',
     success: function(data) {
       var igFeed = data.data.user.edge_owner_to_timeline_media.edges;
       $(igFeed).each(function(i,obj) {
