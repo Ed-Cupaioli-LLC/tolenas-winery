@@ -2,15 +2,9 @@
 layout: default
 css: page
 content-id: page
-scripts:
-- page
 ---
 {% if page.bg-image %}
-<section id="hero" style="background-image: url({{ page.bg-image }});">
-  <div class="inner-section">
-    <h1>{{ page.title }}</h1>
-  </div>
-</section>
+{% include hero.html %}
 {% endif %}
 <section id="content">
   <div class="inner-section">
