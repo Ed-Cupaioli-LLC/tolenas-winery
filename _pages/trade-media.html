@@ -83,21 +83,71 @@ brand-assets:
 wine-portfolio:
   wines: 
   - title: Suisun Valley Red Blend
-    info: 
-      tech-sheet: 
-      - link: 
-        title: 2017 TS
-      bottle-shot: 
-      - link: 
-        title: 2017 BS
-      font-label: 
-      - link: 
-        title: 2018 FL
-      - link: 
-        title: 2017 FL  
-      tastry: 
-      - link: 
-        title: 2017 T 
+    image: /img/red-blend.png
+    tech-sheet: 
+    - link: /img/tolenas_techsheet-2017redblend.pdf
+      title: 2017 TS
+    bottle-shot: 
+    - link: /img/red-blend-bottle.jpg
+      title: 2017 BS
+    front-label: 
+    - link: 
+      title: 2018 FL
+    - link: 
+      title: 2017 FL  
+    tastry: 
+    - link: 
+      title: 2017 T 
+newsroom: 
+  stories:
+  - title: Best Wines for the Holidays
+    outlet: Where Traveler  
+    link: https://www.wheretraveler.com/eat/great-experiences-and-wine-accoutrements-to-complete-your-celebration
+    date: December 2020
+  - title: Holiday Gift Guide 2020 | Wine, Coffee and Foodie Gifts
+    outlet: Posh Lifestyle & Beauty Blog 
+    link: http://www.poshbeautyblog.com/health/2020/12/17/holiday-gift-guide-2020-wine-coffee-and-foodie-gifts
+    date: December 2020
+  - title: Winemaking without Power
+    outlet: Good Day Sacramento 
+    link: https://gooddaysacramento.cbslocal.com/video/program/652/4876890-winemaking-without-power/
+    date: November 2020
+  - title: Best Wines for Thanksgiving 2020
+    outlet: Fortune
+    link: https://fortune.com/2020/11/21/best-wines-thanksgiving-wine-recommendations-sparkling-white-rose-red/
+    date: November 2020
+  - title: Second generation award winning Suisun Valley Winemakers Tell Story
+    outlet: Daily Republic 
+    link: https://www.dailyrepublic.com/all-dr-news/solano-news/fairfield/second-generation-award-winning-suisun-winemakers-tell-story/
+    date: February 2020
+  - title: Tenbrink Vineyards and Tolenas Winery – A Family Story
+    outlet: California Wines and Wineries 
+    link: https://californiawinesandwineries.com/2020/01/09/tenbrink-vineyards-and-tolenas-winery-a-family-story/ 
+    date: January 2020
+  - title: From Tolenas With Love
+    outlet: The Vinter Project  
+    link: https://vintnerproject.com/people/from-tolenas-with-love/
+    date: August 2019
+  - title: Suisun Valley Winemaker Earns Gold Medal
+    outlet: Daily Republic
+    link: https://www.dailyrepublic.com/all-dr-news/community/community-news-and-views/suisun-valley-winemaker-earns-gold-medal-in-the-2019-international-womens-wine-competition-with-her-91-point-white-pinot-noir/
+    date: July 2019
+  - title: Featured Winery - Tolenas Winery 
+    outlet: Winery Reflections
+    link: https://wineryreflections.com/suisun-valley/featured-winery-1
+    date: December 2019
+  - title: 2018 Eclipse Suisun Valley White Pinot Noir - Tolenas Vineyards Winery 
+    outlet: Winery Reflections
+    link: https://wineryreflections.com/tolenas-white-pinot-noir
+    date: December 2019
+  - title: Suisun Valley Event Leaves Guests Feeling Vine
+    outlet: Daily Republic 
+    link: https://www.dailyrepublic.com/all-dr-news/solano-news/fairfield/suisun-valley-event-leaves-guests-feeling-vine/
+    date: December 2019
+  - title: Homegrown
+    outlet: Solano Land Trust 
+    link: https://solanolandtrust.org/evistas/homegrown
+    date: June 2018  
 ---
 {% include hero.html %}
 <section id="contact-section">
@@ -190,20 +240,33 @@ wine-portfolio:
         {% for wine in page.wine-portfolio.wines %}
         <div class="portfolio-col">
           <div class="wine-image">
-            <img src="{{ wine.bottle-shot.image[0].link }}" class="wine-image-src"/>
+            <img src="{{ wine.image }}" class="wine-image-src"/>
           </div>
           <div class="wine-info">
-            <div class="info-block">
-              {% for info in wine.info %}
-              <div class="info-label">{{ info.title }}</div>
-              <div class="info-links">
-                {% for asset in info %}
-                <a href="{{ asset.link }}">{{ asset.title }}</a>
-                {% endfor %}
-              </div>
-              {% endfor %}
-            </div>
+            <div class="btn">{{ wine.title }}</div>
+            {% include wine-info.html data=wine.tech-sheet title="Tech Sheet" %}
+            {% include wine-info.html data=wine.bottle-shot title="Bottle Shot" %}
+            {% include wine-info.html data=wine.front-label title="Front Label" %}
+            {% include wine-info.html data=wine.tastry title="Tastry" %}
           </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+</section>
+<section id="newsroom" class="content-section">
+  <div class="inner-section">
+    <div class="content-nav">
+      <a class="btn nav-link" href="#newsroom">Newsroom</a>
+    </div>
+    <div class="content-body">
+      <div class="story-list">
+        {% for story in page.newsroom.stories %}
+        <div class="story">
+          <i class="fa fa-chevron-right"></i>
+          <div class="story-date"></div>
+          <a href="{{ story.link }}" class="story-link">{{ story.outlet}}, {{ story.title }}</a>
         </div>
         {% endfor %}
       </div>
