@@ -11,28 +11,37 @@
     }
   }
   #menu-section {
+    @include bp-large {
+      padding-top: 0;
+      padding-bottom: 0;
+    } 
     .inner-section {
       max-width: 1176px;
       margin: auto;
     }
     .category-menu {
       display: flex;
-      @include bp-medium {
+      @include bp-large {
        display: block;
       }
       .menu-col {
         flex: 1  0 33.333%;
         padding: 0 12.5px; 
-        @include bp-medium {
-          
-        }
+        @include bp-large {
+          padding: 5px 0;
+        }  
         .menu-link {
           background-size: cover;
+          background-position: center;
           height: 407px;
           display: flex;
           justify-content: center;
           align-items: center;
           position: relative;
+          @include bp-large {
+            height: 55px;
+            background-size: 100% auto;
+          }
           &:after {
             position: absolute;
             display: block;
@@ -71,10 +80,16 @@
     }
     .content-nav {
       display: flex;
+      flex-flow: row nowrap;
       .nav-link {
         background-color: $white;
         color: $black;
         margin: 0;
+        @include bp-large {
+          border: 1px solid $black;
+          padding: 0.5rem 1rem;
+          font-size: 15px;
+        }
         &.active {
           background-color: $black;
           color: $gold;
