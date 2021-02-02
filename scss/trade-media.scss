@@ -145,10 +145,17 @@
       .photos-grid {
         display: flex;
         flex-flow: row wrap;
+        @include bp-large {
+          display: block;
+        }
         .photo-col {
           width: 33.333%;
           padding: 23px;
           text-align: center;
+          @include bp-large {
+            width: 100%;
+            padding: 15px 0;
+          }  
           .photo-image-box {
             height: 272px;
             width: 251px; 
