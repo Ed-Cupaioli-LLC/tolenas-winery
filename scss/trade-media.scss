@@ -2,6 +2,9 @@
 @import "mixins.scss";
 #trade-media {
   #contact-section {
+    @include bp-large {
+      padding: 20px;
+    }
     .inner-section {
       max-width: 777px;
       text-align: center;
