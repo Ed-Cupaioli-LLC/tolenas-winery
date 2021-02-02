@@ -99,6 +99,9 @@
     .content-body {
       background-color: $tan;
       padding: 80px 50px;
+      @include bp-large {
+        padding: 50px 25px;
+      }
       .content-block {
         display: none;
         &.active {
@@ -111,13 +114,22 @@
     #logos {
       .logo-grid {
         display: flex;
+        @include bp-large {
+          display: block;
+        }
         .logo-col {
           flex: 1 0 33.333%;
           text-align: center;
           padding: 0 36px;
+          @include bp-large {
+            padding: 0 0 30px;
+          }  
           .logo-title {
             margin-top: 13px;
             font-weight: bold;
+            @include bp-large {
+              margin-top: 10px;
+            }  
           }
           .logo-links {
             text-transform: uppercase;
