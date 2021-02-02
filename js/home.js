@@ -93,4 +93,13 @@ $(function(){
     $('.insta-caption').html('');
     $('.insta-link').attr('href','');
   });
+
+  $('.hero-link[href="#email-signup"]').click(function(e) {
+    e.preventDefault();
+    
+    $('html,body').animate({
+      scrollTop: $('#footer-signup').offset().top - 88
+    });
+    $('#footer-signup .email').focus();
+  });
 });

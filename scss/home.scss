@@ -30,6 +30,9 @@
         .hero-link {
           text-decoration: underline;
           font-size: 20px;
+          &:active,&:hover,&:focus {
+            color: $white;
+          }
           @include bp-medium {
             font-size: 16px;
           }
