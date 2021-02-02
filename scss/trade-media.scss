@@ -194,9 +194,9 @@
         display: flex;
         .wine-image {
           
-          flex: 1 0 auto;
+          flex: 0 0 210px;
           .wine-image-src {
-            width: 210px;  
+            
             margin: 0;
           }
         }
@@ -208,6 +208,7 @@
           }
           .info-block {
             display: flex;
+            margin-bottom: 1rem;
             .info-label {
               flex: 0 0 100px;
               font-size: 18px;
