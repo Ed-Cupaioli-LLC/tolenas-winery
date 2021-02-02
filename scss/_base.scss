@@ -233,4 +233,12 @@ body {
 		z-index: 9 !important;
 		margin-top: $nav-height !important;
 	}
+	.c7-checkout-template {
+		a {
+			text-decoration: underline;
+			&:hover {
+				cursor: pointer;
+			}
+		}
+	}	
 }
