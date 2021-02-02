@@ -5,21 +5,17 @@ bg-image: /img/grapes-bg.jpg
 css: trade-media
 content-id: trade-media
 layout: default
+scripts: 
+- trade-media
 contact: |-
   For all media inquiries, including press visits and additional assets, please contact Erin Yamauchi, at 808.292.1375 or [erin.yamauchi@estreet.co](erin.yamauchi@estreet.co)
-categories: 
+media-categories: 
 - title: Brand Assets
-  image: 
+  image: /img/brand-assets-menu.jpg
 - title: Wine Portfolio 
-  image:   
+  image: /img/wine-portfolio-menu.jpg
 - title: Newsroom
-  image:  
-  content: 
-    title: Newsroom
-    items: 
-    - title: 
-      date: 
-      link:  
+  image: /img/newsroom-menu.jpg
 brand-assets:
   links: 
   - Logos
@@ -61,7 +57,7 @@ brand-assets:
         original: /img/winery.jpg
         thumb: /img/winery-thumb.jpg
   bios: 
-    - name: Lisa Howard, 
+    - name: Lisa Howard,
       title: Winemaker & Co-owner
       link: /img/lisa_tolenas_bio.pdf
     - name: Cliff Howard,
@@ -74,14 +70,13 @@ brand-assets:
     - title: Our Story
       id: tP6bb6E81OQ
     - title: El Camino 
-      id:  
+      id: mGR4GpqMxzY
     - title: Eclipse
-      id: 
+      id: QcdezmciD3M
     - title: Totality
-      id: iDjMm9NZWKM  
-
+      id: iDjMm9NZWKM 
 wine-portfolio:
-  wines: 
+  wines:
   - title: Suisun Valley Red Blend
     image: /img/red-blend.png
     tech-sheet: 
@@ -98,12 +93,104 @@ wine-portfolio:
     tastry: 
     - link: 
       title: 2017 T 
+  - title: Eclipse Pinot Noir
+    image: /img/pinot.png
+    tech-sheet: 
+    - link: /img/Tolenas_TechSheet_2019Eclipse.pdf
+      title: 2019 TS 
+    bottle-shot: 
+    - link: /img/eclipse-bottle.jpg
+      title: 2019 BS
+    front-label: 
+    - link: /img/eclipse-label-2020.png
+      title: 2020 FL
+    - link: /img/eclipse-label-2019.png
+      title: 2019 FL
+    tastry: 
+    - link: /img/eclipse-tastry.pdf
+      title: 2019 T 
+  - title: Suisun Valley Rosé
+    image: /img/rose.png
+    tech-sheet: 
+    - link: /img/Tolenas_TechSheet_2019Rose.pdf
+      title:  2019 TS
+    bottle-shot: 
+    - link: /img/rose-bottle.jpg
+      title: 2019 BS
+    front-label: 
+    - link: /img/rose-label-2020.png
+      title: 2020 FL
+    - link: /img/rose-label-2019.png
+      title: 2019 FL
+    tastry: 
+    - link: /img/tolenas_winery_rose_2019.pdf
+      title: 2019 T
+  - title: Suisun Valley Sauvignon Blanc
+    image: /img/savy-b.png
+    tech-sheet: 
+    - link: /img/Tolenas_TechSheet-2019SauvignonBlanc.pdf
+      title: 2019 TS
+    bottle-shot: 
+    - link: /img/sauvignon-blanc-bottle.jpg
+      title: 2019 BS
+    front-label: 
+    - link: /img/sauvignon-blanc-label-2020.png
+      title: 2020 FL
+    - link: /img/sauvignon-blanc-label-2019.png
+      title: 2019 FL
+    tastry: 
+    - link: /img/tolenas_winery_sauvignon_blanc_2019.pdf
+      title: 2019 T
+  - title: Suisun Valley Gamay Nouveau 
+    image: /img/gamay.png
+    tech-sheet: 
+    - link: 
+      title: 
+    bottle-shot: 
+    - link: 
+      title: 
+    front-label: 
+    - link: 
+      title: 
+    - link: 
+      title: 
+    tastry: 
+    - link: 
+      title:
+  - title: Lot 38 Suisun Valley Dessert Wine
+    image: /img/dessert.png
+    tech-sheet: 
+    - link: 
+      title: 
+    bottle-shot: 
+    - link: 
+      title: 
+    front-label: 
+    - link: 
+      title: 
+    - link: 
+      title: 
+    tastry: 
+    - link: 
+      title:
+  - title: Suisun Valley Zinfandel
+    image: /img/zin.png
+    tech-sheet: 
+    - link: 
+      title: 
+    bottle-shot: 
+    - link: 
+      title: 
+    front-label: 
+    - link: 
+      title: 
+    - link: 
+      title: 
+    tastry: 
+    - link: 
+      title: 
 newsroom: 
   stories:
-  - title: Best Wines for the Holidays
-    outlet: Where Traveler  
-    link: https://www.wheretraveler.com/eat/great-experiences-and-wine-accoutrements-to-complete-your-celebration
-    date: December 2020
   - title: Holiday Gift Guide 2020 | Wine, Coffee and Foodie Gifts
     outlet: Posh Lifestyle & Beauty Blog 
     link: http://www.poshbeautyblog.com/health/2020/12/17/holiday-gift-guide-2020-wine-coffee-and-foodie-gifts
@@ -158,9 +245,9 @@ newsroom:
 <section id="menu-section">
   <div class="inner-section">
     <div class="category-menu">
-      {% for category in page.categories %}
+      {% for category in page.media-categories %}
       <div class="menu-col">
-        <a href="#{{ category.title | slugify }}" style="background-image: url({{ category.image }});">
+        <a href="#{{ category.title | slugify }}" style="background-image: url({{ category.image }});" class="menu-link {% if forloop.first %}active{% endif %}">
           <h2>{{ category.title }}</h2>  
         </a>
       </div>
@@ -168,11 +255,11 @@ newsroom:
     </div>
   </div>
 </section>
-<section class="content-section" id="brand-assets">
+<section class="content-section active" id="brand-assets">
   <div class="inner-section">
     <div class="content-nav">
       {% for link in page.brand-assets.links %}
-      <a href="{{ link.slugify }}" class="nav-link btn">{{ link }}</a>
+      <a href="#{{ link | slugify }}" class="nav-link btn {% if forloop.first %}active{% endif%}">{{ link }}</a>
       {% endfor %}
     </div>
     <div class="content-body">
@@ -181,7 +268,8 @@ newsroom:
         <div class="logo-grid">
           {% for logo in page.brand-assets.logos %}
           <div class="logo-col">
-            <img src="{{ logo.images[1] }}" class="logo-image"/>
+            {% assign display-image = logo.images | where_exp: "image", "image contains '.png'" %}
+            <img src="{{ display-image }}" class="logo-image"/>
             <div class="logo-title">{{ logo.title }}</div>
             <div class="logo-links">
               {% for image in logo.images %}
@@ -199,7 +287,9 @@ newsroom:
         <div class="photos-grid">
           {% for photo in page.brand-assets.photos %}
           <div class="photo-col">
-            <img class="photo-image" src="{{ photo.image.thumb }}"/> 
+            <div class="photo-image-box">
+              <img class="photo-image" src="{{ photo.image.thumb }}"/> 
+            </div>
             <a class="photo-link" download href="{{ photo.image.original }}">{{ photo.title }}</a>
           </div>
           {% endfor %}
@@ -210,7 +300,11 @@ newsroom:
         <div class="bio-grid">
           {% for bio in page.brand-assets.bios %}
           <div class="bio-col">
-            
+            <div class="bio-name">{{ bio.name }}</div>
+            {% if bio.title.size > 0 %}
+            <div class="bio-title">{{ bio.title }}</div>
+            {% endif %}
+            <a href="{{ bio.link }}" download class="bio-link">Bio</a>
           </div>
           {% endfor %}
         </div>
@@ -220,8 +314,10 @@ newsroom:
         <div class="video-grid">
           {% for video in page.brand-assets.videos %}
           <div class="video-col">
-            <img src="https://img.youtube.com/vi/{{video.id}}/mqdefault.jpg" />
-            <a href="https://www.youtube.com/watch?v={{ video.id }}">{{ video.title }}</a>
+            <a class="video-link" href="https://www.youtube.com/watch?v={{ video.id }}">
+            <img class="video-thumb" src="https://img.youtube.com/vi/{{video.id}}/mqdefault.jpg" />
+            <div class="video-title">{{ video.title }}</div>
+            </a>
           </div>
           {% endfor %}
         </div>
@@ -229,10 +325,10 @@ newsroom:
     </div>
   </div>
 </section>
-<section id="wine-portfolio">
+<section id="wine-portfolio" class="content-section">
   <div class="inner-section">
     <div class="content-nav">
-      <a class="btn nav-link" href="#wine-portfolio">Wine Portfolio</a>
+      <a class="btn nav-link active" href="#wine-portfolio">Wine Portfolio</a>
     </div>
     <div class="content-body">
       
@@ -258,14 +354,14 @@ newsroom:
 <section id="newsroom" class="content-section">
   <div class="inner-section">
     <div class="content-nav">
-      <a class="btn nav-link" href="#newsroom">Newsroom</a>
+      <a class="btn nav-link active" href="#newsroom">Newsroom</a>
     </div>
     <div class="content-body">
       <div class="story-list">
         {% for story in page.newsroom.stories %}
         <div class="story">
           <i class="fa fa-chevron-right"></i>
-          <div class="story-date"></div>
+          <span class="story-date">{{ story.date }}</span>
           <a href="{{ story.link }}" class="story-link">{{ story.outlet}}, {{ story.title }}</a>
         </div>
         {% endfor %}
