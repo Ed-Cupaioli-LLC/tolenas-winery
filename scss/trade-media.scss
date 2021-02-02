@@ -1,0 +1,329 @@
+@import "vars.scss";
+@import "mixins.scss";
+#trade-media {
+  #contact-section {
+    @include bp-large {
+      padding: 20px;
+    }
+    .inner-section {
+      max-width: 777px;
+      text-align: center;
+      font-weight: bold;
+      margin: auto;
+      font-size: 20px;
+    }
+  }
+  #menu-section {
+    @include bp-large {
+      padding-top: 0;
+      padding-bottom: 0;
+    } 
+    .inner-section {
+      max-width: 1176px;
+      margin: auto;
+    }
+    .category-menu {
+      display: flex;
+      @include bp-large {
+       display: block;
+      }
+      .menu-col {
+        flex: 1  0 33.333%;
+        padding: 0 12.5px; 
+        @include bp-large {
+          padding: 5px 0;
+        }  
+        .menu-link {
+          background-size: cover;
+          background-position: center;
+          height: 407px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          @include bp-large {
+            height: 55px;
+            background-size: 100% auto;
+          }
+          &:after {
+            position: absolute;
+            display: block;
+            content: '';
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: rgba($black,0.5);
+            z-index: 1;
+            @include transition(background-color);
+          }
+          &:hover, &.active {
+            &:after {
+              background-color: rgba($gold,0.7);
+            }
+          }
+          h2 {
+            color: $white;
+            position: relative;
+            z-index: 2;
+            margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+  .content-section {
+    display: none;
+    &.active {
+      display: block;
+    }
+    .inner-section {
+      max-width: 1176px;
+      margin: auto;
+    }
+    .content-nav {
+      display: flex;
+      flex-flow: row nowrap;
+      .nav-link {
+        background-color: $white;
+        color: $black;
+        margin: 0;
+        @include bp-large {
+          border: 1px solid $black;
+          padding: 0.5rem 1rem;
+          font-size: 15px;
+        }
+        &.active {
+          background-color: $black;
+          color: $gold;
+        }
+      }
+    }
+    .content-body {
+      background-color: $tan;
+      padding: 80px 50px;
+      @include bp-large {
+        padding: 50px 25px;
+      }
+      .content-block {
+        display: none;
+        &.active {
+          display: block;
+        }
+      }
+    }
+  }
+  #brand-assets {
+    #logos {
+      .logo-grid {
+        display: flex;
+        @include bp-large {
+          display: block;
+        }
+        .logo-col {
+          flex: 1 0 33.333%;
+          text-align: center;
+          padding: 0 36px;
+          @include bp-large {
+            padding: 15px 0;
+          }  
+          .logo-title {
+            margin-top: 13px;
+            font-weight: bold;
+            @include bp-large {
+              margin-top: 10px;
+            }  
+          }
+          .logo-links {
+            text-transform: uppercase;
+            
+            .logo-link {
+              text-decoration: underline;
+            }
+          }
+        }
+      }
+    }
+    #photos {
+      .photos-grid {
+        display: flex;
+        flex-flow: row wrap;
+        @include bp-large {
+          display: block;
+        }
+        .photo-col {
+          width: 33.333%;
+          padding: 23px;
+          text-align: center;
+          @include bp-large {
+            width: 100%;
+            padding: 15px 0;
+          }  
+          .photo-image-box {
+            height: 272px;
+            width: 251px; 
+            max-width: 100%;
+            margin: 0 auto 20px;
+            overflow: hidden;
+            position: relative;
+            .photo-image {
+              object-fit: cover;
+              height: 100%;
+              width: 100%;
+            }
+          }
+          .photo-link {
+            font-weight: bold;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    #bios {
+      .bio-grid {
+        display: flex;
+        justify-content: center;
+        @include bp-large {
+          display: block;
+        }
+        .bio-col {
+          width: 33.333%;
+          text-align: center;
+          padding: 1rem;
+          font-weight: bold;
+          @include bp-large {
+            width: 100%;
+            padding: 15px 0;
+          }  
+          .bio-link {
+            font-weight: normal;
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    #videos {
+      .video-grid {
+        display: flex;
+        max-width: 850px;
+        margin: auto;
+        flex-flow: row wrap;
+        justify-content: center;
+        @include bp-large {
+          display: block;
+        }
+        .video-col {
+          width: 50%;
+          padding: 2rem 1rem;
+          @include bp-large {
+            padding: 15px 0;
+            width: 100%;
+          }  
+          .video-link {
+            text-align: center;
+            .video-thumb {
+              margin: auto;
+            }
+            .video-title {
+              font-weight: bold;
+              text-decoration: underline;
+              margin-top: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+  #wine-portfolio {
+    .portfolio-grid {
+      display: flex;
+      flex-flow: row wrap;
+      @include bp-large {
+        display: block;
+      }
+      .portfolio-col {
+        width: 50%;
+        padding: 1rem;
+        display: flex;
+        @include bp-large {
+          width: 100%;
+          padding: 15px 0;
+        }  
+        .wine-image {
+          flex: 0 0 210px;
+          @include bp-large {
+            flex: 0 0 84px;
+          }  
+          .wine-image-src {
+            margin: 0;
+          }
+        }
+        .wine-info {
+          padding-left: 30px;
+          flex: 1 1 auto;
+          .btn {
+            margin-top: 0;
+            text-transform: initial;
+            padding: 0.5rem 1rem;
+            display: inline-block;
+            &:hover {
+              color: $gold;
+            }
+          }
+          .info-block {
+            display: flex;
+            margin-bottom: 1rem;
+            @include bp-large {
+              margin-bottom: 10px;
+            }
+            .info-label {
+              flex: 0 0 100px;
+              font-size: 18px;
+            }
+            .info-links {
+              
+              text-align: left;
+              a {
+                text-decoration: underline;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  #newsroom {
+    .story-list {
+      .story {
+        display: flex;
+        margin-bottom: 1rem;
+        @include bp-large {
+          display: block;
+        }
+        i {
+          color: $gold;
+          position: relative;
+          margin-right: 0.5rem;
+          top: 5px;
+          @include bp-large {
+            top: 0;
+          }  
+        }
+        .story-date {
+          display: inline-block;
+          font-weight: bold;
+          margin-right: 0.5rem;
+          @include bp-large {
+            display: inline;
+          }
+        }
+        .story-link {
+          text-decoration: underline;
+          @include bp-large {
+            display: inline;
+          }
+        }
+      }
+    } 
+  }
+}

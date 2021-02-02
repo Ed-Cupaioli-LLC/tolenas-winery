@@ -44,5 +44,8 @@ $(function(){
     });
   });
   
-
+  //hero animation 
+  if ($('#hero').length > 0) {
+    $('#hero h1').addClass('active');
+  }
 });

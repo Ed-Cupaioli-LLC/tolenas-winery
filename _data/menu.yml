@@ -9,6 +9,8 @@ nav:
   url: /club/
 - title: Visit
   url: /visit/
+- title: Trade & Media
+  url: /trade-media/  
 cart: /cart/
 login: /profile/login/
 terms: /terms/

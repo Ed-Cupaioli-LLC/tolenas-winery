@@ -2,35 +2,6 @@
 @import "mixins.scss";
 main {
   padding-top: $nav-height;
-  #hero {
-    background-position: center;
-    background-size: cover;
-    height: 500px;
-    @include bp-medium {
-      height: 330px;
-    }
-    .inner-section {
-      max-width: 1576px;
-      margin: auto;
-      display: flex;
-      height: 100%;
-      align-items: flex-end;
-      //overflow: hidden;
-    }
-    h1 {
-      color: $white;
-      opacity: 0;
-      transform: translateY(100%);
-      @include transition(transform,opacity);
-      transition-duration: 0.7s;
-      transition-timing-function: ease-out;
-      margin-bottom: 0;
-      &.active {
-        opacity: 1;
-        transform: translateY(0%);
-      }
-    }
-  }
   #content {
     .inner-section {
       max-width: 950px;

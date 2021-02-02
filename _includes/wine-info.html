@@ -1,0 +1,12 @@
+{% assign data = include.data %}
+{% assign title = include.title %}
+{% if data[0].link != "" %}
+<div class="info-block">      
+  <div class="info-label">{{ title }}</div>
+  <div class="info-links">
+    {% for asset in data %}
+    <a href="{{ asset.link }}">{{ asset.title }}</a>
+    {% endfor %}
+  </div>
+</div>
+{% endif %}
