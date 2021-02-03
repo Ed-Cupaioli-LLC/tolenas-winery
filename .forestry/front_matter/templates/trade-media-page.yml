@@ -13,6 +13,10 @@ fields:
 - type: textarea
   name: contact
   label: contact
+  config:
+    wysiwyg: true
+    schema:
+      format: markdown
 - type: field_group
   name: brand-assets
   label: brand-assets
