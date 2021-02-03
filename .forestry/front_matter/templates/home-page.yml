@@ -1,31 +1,10 @@
 ---
 label: Home Page
-hide_body: false
+hide_body: true
 fields:
 - type: text
   name: title
   label: title
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: permalink
-  label: permalink
-- type: text
-  name: nav_class
-  label: nav_class
-- type: text
-  name: css
-  label: css
-- type: text
-  name: content-id
-  label: content-id
-- type: boolean
-  name: slick
-  label: slick
-- type: list
-  name: scripts
-  label: scripts
 - type: field_group
   name: hero
   label: hero
