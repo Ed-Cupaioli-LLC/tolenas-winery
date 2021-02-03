@@ -29,7 +29,7 @@ module.exports = function(grunt) {
     terser: {
       options: {
         compress: true,
-        mangle: false
+        mangle: true
       },
       target: {
         files: [{
