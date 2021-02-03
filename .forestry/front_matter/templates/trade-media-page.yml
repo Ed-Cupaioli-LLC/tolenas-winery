@@ -13,16 +13,6 @@ fields:
 - type: textarea
   name: contact
   label: contact
-- type: field_group_list
-  name: media-categories
-  label: media-categories
-  fields:
-  - type: text
-    name: title
-    label: title
-  - type: file
-    name: image
-    label: image
 - type: field_group
   name: brand-assets
   label: brand-assets
