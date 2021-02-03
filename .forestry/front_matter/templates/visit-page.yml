@@ -2,24 +2,6 @@
 label: Visit Page
 hide_body: false
 fields:
-- type: text
-  name: permalink
-  label: permalink
-- type: text
-  name: layout
-  label: layout
-- type: text
-  name: content-id
-  label: content-id
-- type: text
-  name: css
-  label: css
-- type: list
-  name: scripts
-  label: scripts
-- type: text
-  name: title
-  label: title
 - type: field_group_list
   name: sections
   label: sections
