@@ -1,8 +1,9 @@
 ---
-permalink: /club/
+permalink: "/club/"
 title: Club
-bg-image: /img/club-bannr.jpg
+bg-image: "/img/club-bannr.jpg"
 css: club
+
 ---
 ## JOIN OUR WINE CLUB
 
