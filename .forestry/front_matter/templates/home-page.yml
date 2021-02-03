@@ -1,0 +1,68 @@
+---
+label: Home Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: nav_class
+  label: nav_class
+- type: text
+  name: css
+  label: css
+- type: text
+  name: content-id
+  label: content-id
+- type: boolean
+  name: slick
+  label: slick
+- type: list
+  name: scripts
+  label: scripts
+- type: field_group
+  name: hero
+  label: hero
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: field_group_list
+    name: links
+    label: links
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: url
+      label: url
+- type: field_group
+  name: products
+  label: products
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: collection-slug
+    label: collection-slug
+- type: field_group_list
+  name: links
+  label: links
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+  - type: text
+    name: url
+    label: url
