@@ -222,8 +222,13 @@
           }  
           .video-link {
             text-align: center;
+            
+            overflow: hidden;
+            position: relative;
             .video-thumb {
               margin: auto;
+              object-fit: cover;
+              object-position: center;
             }
             .video-title {
               font-weight: bold;
