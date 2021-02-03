@@ -1,5 +1,5 @@
 ---
-label: Story Page
+label: Page
 hide_body: false
 fields:
 - type: text
@@ -8,3 +8,5 @@ fields:
 - type: file
   name: bg-image
   label: bg-image
+pages:
+- _pages/club.html
