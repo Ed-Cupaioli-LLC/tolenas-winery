@@ -1,0 +1,169 @@
+---
+label: Trade & Media Page
+hide_body: false
+fields:
+- type: text
+  name: title
+  label: title
+- type: text
+  name: permalink
+  label: permalink
+- type: file
+  name: bg-image
+  label: bg-image
+- type: text
+  name: css
+  label: css
+- type: text
+  name: content-id
+  label: content-id
+- type: text
+  name: layout
+  label: layout
+- type: list
+  name: scripts
+  label: scripts
+- type: textarea
+  name: contact
+  label: contact
+- type: field_group_list
+  name: media-categories
+  label: media-categories
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: file
+    name: image
+    label: image
+- type: field_group
+  name: brand-assets
+  label: brand-assets
+  fields:
+  - type: list
+    name: links
+    label: links
+  - type: field_group_list
+    name: logos
+    label: logos
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: image_gallery
+      name: images
+      label: images
+  - type: field_group_list
+    name: photos
+    label: photos
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: field_group
+      name: image
+      label: image
+      fields:
+      - type: file
+        name: original
+        label: original
+      - type: file
+        name: thumb
+        label: thumb
+  - type: field_group_list
+    name: bios
+    label: bios
+    fields:
+    - type: text
+      name: name
+      label: name
+    - type: text
+      name: title
+      label: title
+    - type: file
+      name: link
+      label: link
+  - type: field_group_list
+    name: videos
+    label: videos
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: id
+      label: id
+- type: field_group
+  name: wine-portfolio
+  label: wine-portfolio
+  fields:
+  - type: field_group_list
+    name: wines
+    label: wines
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: file
+      name: image
+      label: image
+    - type: field_group_list
+      name: tech-sheet
+      label: tech-sheet
+      fields:
+      - type: file
+        name: link
+        label: link
+      - type: text
+        name: title
+        label: title
+    - type: field_group_list
+      name: bottle-shot
+      label: bottle-shot
+      fields:
+      - type: file
+        name: link
+        label: link
+      - type: text
+        name: title
+        label: title
+    - type: field_group_list
+      name: front-label
+      label: front-label
+      fields:
+      - type: file
+        name: link
+        label: link
+      - type: text
+        name: title
+        label: title
+    - type: field_group_list
+      name: tastry
+      label: tastry
+      fields:
+      - type: file
+        name: link
+        label: link
+      - type: text
+        name: title
+        label: title
+- type: field_group
+  name: newsroom
+  label: newsroom
+  fields:
+  - type: field_group_list
+    name: stories
+    label: stories
+    fields:
+    - type: text
+      name: title
+      label: title
+    - type: text
+      name: outlet
+      label: outlet
+    - type: textarea
+      name: link
+      label: link
+    - type: text
+      name: date
+      label: date
