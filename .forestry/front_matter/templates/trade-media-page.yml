@@ -1,28 +1,15 @@
 ---
 label: Trade & Media Page
-hide_body: false
+hide_body: true
 fields:
-- type: text
-  name: title
+- name: title
+  type: text
+  config:
+    required: false
   label: title
-- type: text
-  name: permalink
-  label: permalink
 - type: file
   name: bg-image
   label: bg-image
-- type: text
-  name: css
-  label: css
-- type: text
-  name: content-id
-  label: content-id
-- type: text
-  name: layout
-  label: layout
-- type: list
-  name: scripts
-  label: scripts
 - type: textarea
   name: contact
   label: contact
