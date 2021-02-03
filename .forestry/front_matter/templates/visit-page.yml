@@ -29,3 +29,5 @@ fields:
     - type: file
       name: image
       label: image
+pages:
+- _pages/visit.html
