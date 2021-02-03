@@ -1,0 +1,22 @@
+---
+label: Shop Page
+hide_body: false
+fields:
+- type: text
+  name: permalink
+  label: permalink
+- type: text
+  name: layout
+  label: layout
+- type: text
+  name: css
+  label: css
+- type: text
+  name: content-id
+  label: content-id
+- type: text
+  name: title
+  label: title
+- type: file
+  name: bg-image
+  label: bg-image
