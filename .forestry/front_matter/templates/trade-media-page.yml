@@ -26,21 +26,25 @@ fields:
   fields:
   - type: field_group_list
     name: logos
-    label: logos
+    label: Logos
     fields:
     - type: text
       name: title
       label: title
+      description: title text that appears below the logo image
     - type: image_gallery
       name: images
       label: images
+      description: assets for the logo. always put png first, then jpg for the formats.
+        the png will be displayed on the page
   - type: field_group_list
     name: photos
-    label: photos
+    label: Photos
     fields:
     - type: text
       name: title
       label: title
+      description: text that appears below the photo
     - type: field_group
       name: image
       label: image
@@ -48,22 +52,29 @@ fields:
       - type: file
         name: original
         label: original
+        description: 'original photo sized at a 1280px max width. '
       - type: file
         name: thumb
         label: thumb
+        description: 'Thumbnail photo that displays on the page with a 251px width
+          and 272 px height. '
   - type: field_group_list
     name: bios
-    label: bios
+    label: Bios
     fields:
     - type: text
       name: name
       label: name
+      description: name for each bio
     - type: text
       name: title
       label: title
+      description: the position title for each person. optional if bio isn't of a
+        person
     - type: file
       name: link
-      label: link
+      label: File
+      description: file upload for the PDF of the bio
   - type: field_group_list
     name: videos
     label: videos
@@ -74,6 +85,7 @@ fields:
     - type: text
       name: id
       label: id
+  description: the logos, photos, bios, and videos that appear on click of brand assets
 - type: field_group
   name: wine-portfolio
   label: Wine Portfolio
