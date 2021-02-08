@@ -101,19 +101,26 @@ fields:
     - type: text
       name: title
       label: title
+      description: name of the wine
     - type: file
       name: image
       label: image
+      description: 'image of the wine. each image is sized at 210px width and  388px
+        height. '
     - type: field_group_list
       name: tech-sheet
-      label: tech-sheet
+      label: Tech Sheet
       fields:
       - type: file
         name: link
-        label: link
+        label: File
+        description: File upload for the tech sheet
       - type: text
         name: title
         label: title
+        description: 'Download link title for the tech sheet. Follow this naming convention:
+          [YEAR] TS'
+      description: 'file and link title for tech sheet. multiple sheets are possible. '
     - type: field_group_list
       name: bottle-shot
       label: bottle-shot
@@ -144,6 +151,7 @@ fields:
       - type: text
         name: title
         label: title
+    description: use the add item button to add new wines
 - type: field_group
   name: newsroom
   label: Newsroom
