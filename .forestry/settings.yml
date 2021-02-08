@@ -12,8 +12,6 @@ sections:
   label: Pages
   create: documents
   match: "**/*"
-  templates:
-  - page
 upload_dir: img
 public_path: "/img"
 front_matter_path: ''
