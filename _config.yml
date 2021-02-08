@@ -1,30 +1,32 @@
 ---
 title: Tolenas Winery
-description: 
-meta_img:
+description: Family. Focused on Quality. Suisun Valley CA.
+meta_img: /img/tolenas-meta.jpg
 twitter:
 favicon: /img/tolenas-favicon.png
-url:
-gtm:
+url: https://tolenaswinery.com/
+gtm: GTM-PTK93VJ
 age-gate: true
 schema:
-  name: 
-  type: 
-  image: 
-  logo:
+  name: Tolenas Winery
+  type: Business
+  image: /img/tolenas-meta.jpg
+  logo:  /img/Tolenas-Gold.jpg
   phone: 
   email: 
   social:
+  - https://www.facebook.com/tolenaswinery/
+  - https://www.instagram.com/tolenaswinery/?hl=en
   location: 
-    address: 
-    city: 
-    state: 
-    zip: 
+    address: 4185 Chadbourne RD
+    city: Fairfield  
+    state: CA
+    zip: 94534
   hours:
     days:
     opens:
     closes:  
-timezone: America/New York
+timezone: America/Los_Angeles
 future: true
 markdown: kramdown
 kramdown:

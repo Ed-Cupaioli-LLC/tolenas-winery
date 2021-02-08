@@ -1,11 +1,11 @@
 $(function (){
-  $('.menu-link').click(function(e){
+  $('#visit-menu .menu-link').click(function(e){
     e.preventDefault();
     const anchor = $(this).attr('href');
     $('.content-section.active').removeClass('active');
     $(anchor).addClass('active');
 
-    $('.menu-link.active').removeClass('active');
+    $('#visit-menu .menu-link.active').removeClass('active');
     $(this).addClass('active');
     $('#visit-menu').removeClass('open');
     var offsetTop;
