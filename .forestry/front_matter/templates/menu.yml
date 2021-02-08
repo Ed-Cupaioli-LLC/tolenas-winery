@@ -1,0 +1,44 @@
+---
+label: Menu
+hide_body: true
+fields:
+- type: field_group_list
+  name: nav
+  label: Navigation Links
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: url
+    label: url
+  description: Page links added to the top nav menu and the footer. Excludes the login,
+    cart, and terms links
+- type: text
+  name: cart
+  label: cart
+- type: text
+  name: login
+  label: login
+- type: text
+  name: terms
+  label: terms
+- type: text
+  name: address
+  label: address
+- type: field_group_list
+  name: social
+  label: social
+  fields:
+  - type: text
+    name: title
+    label: title
+  - type: text
+    name: icon
+    label: icon
+  - type: text
+    name: url
+    label: url
+- type: file
+  name: logo
+  label: logo

@@ -1,6 +1,8 @@
 ---
-permalink: /terms/
+permalink: "/terms/"
 layout: page
+title: Terms
+
 ---
 ## ALL RIGHTS RESERVED
 

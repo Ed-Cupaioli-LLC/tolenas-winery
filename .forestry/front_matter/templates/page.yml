@@ -9,4 +9,4 @@ fields:
   name: bg-image
   label: bg-image
 pages:
-- _pages/club.html
+- _pages/story.md
