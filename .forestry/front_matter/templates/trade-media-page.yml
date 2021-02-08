@@ -7,16 +7,19 @@ fields:
   config:
     required: false
   label: title
+  description: title of the page that appears in the hero
 - type: file
   name: bg-image
-  label: bg-image
+  label: background image
+  description: background image that appears in the hero
 - type: textarea
   name: contact
-  label: contact
+  label: Contact
   config:
     wysiwyg: true
     schema:
       format: markdown
+  description: the paragraph about contact information that appears below the hero
 - type: field_group
   name: brand-assets
   label: Brand Assets
