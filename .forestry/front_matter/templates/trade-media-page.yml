@@ -77,14 +77,18 @@ fields:
       description: file upload for the PDF of the bio
   - type: field_group_list
     name: videos
-    label: videos
+    label: Videos
     fields:
     - type: text
       name: title
       label: title
+      description: Title text that appears below the video thumnail
     - type: text
       name: id
-      label: id
+      label: YouTube Video ID
+      description: Get the youtube video ID by opening the video in youtube and find
+        the 11 character code at the end of the link. Ex) https://www.youtube.com/watch?v=<strong>tP6bb6E81OQ<br>tP6bb6E81OQ
+        </strong> is the ID
   description: the logos, photos, bios, and videos that appear on click of brand assets
 - type: field_group
   name: wine-portfolio
