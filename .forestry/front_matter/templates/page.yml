@@ -8,3 +8,5 @@ fields:
 - type: file
   name: bg-image
   label: bg-image
+pages:
+- _pages/story.md
