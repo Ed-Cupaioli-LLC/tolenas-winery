@@ -123,14 +123,20 @@ fields:
       description: 'file and link title for tech sheet. multiple sheets are possible. '
     - type: field_group_list
       name: bottle-shot
-      label: bottle-shot
+      label: Bottle Shot
       fields:
       - type: file
         name: link
-        label: link
+        label: File
+        description: 'File upload for the bottle shot. Keep images under 1280px wide
+          for easy downloading. '
       - type: text
         name: title
         label: title
+        description: 'Title for the bottle shot download link. Use the following naming
+          convention: [YEAR] BS'
+      description: 'bottle shot image file and link title. multiple bottle shots are
+        possible. '
     - type: field_group_list
       name: front-label
       label: front-label
