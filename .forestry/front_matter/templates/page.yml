@@ -9,4 +9,5 @@ fields:
   name: bg-image
   label: bg-image
 pages:
+- _pages/shop.md
 - _pages/story.md
