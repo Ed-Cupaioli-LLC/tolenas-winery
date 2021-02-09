@@ -4,10 +4,12 @@ hide_body: false
 fields:
 - type: text
   name: title
-  label: title
+  label: Title
+  description: The page title that will appear in the hero
 - type: file
   name: bg-image
-  label: bg-image
+  label: Background Image
+  description: the background image that will appear in the hero
 pages:
 - _pages/club.md
 - _pages/shop.md
