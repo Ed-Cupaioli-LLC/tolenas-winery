@@ -178,14 +178,20 @@ fields:
     - type: text
       name: title
       label: title
+      description: Title of the story
     - type: text
       name: outlet
       label: outlet
+      description: The media outlet that ran the story
     - type: textarea
       name: link
       label: link
+      description: Link to the story
     - type: text
       name: date
       label: date
+      description: 'The date of the story release. Use the following naming convention:
+        [MONTH] [YEAR]. Ex) November 2020'
+    description: Add and order multiple stories here. Select the add item button
 pages:
 - _pages/trade-media.html
