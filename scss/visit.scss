@@ -173,6 +173,10 @@
         line-height: 1;
         padding:5px;
         text-align: center;
+        display: none;
+        @include bp-large {
+          display: block;
+        }
         i {
           position: relative;
           left: 1px;
