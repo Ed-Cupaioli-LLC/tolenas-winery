@@ -139,24 +139,33 @@ fields:
         possible. '
     - type: field_group_list
       name: front-label
-      label: front-label
+      label: Front Label
       fields:
       - type: file
         name: link
-        label: link
+        label: File
+        description: 'image upload for the labels. '
       - type: text
         name: title
         label: title
+        description: 'link title for the front label download links. Use the following
+          naming convention: [YEAR] FL'
+      description: 'images and link titles for the front labels. multiple entries
+        are possible. '
     - type: field_group_list
       name: tastry
-      label: tastry
+      label: Tastry
       fields:
       - type: file
         name: link
-        label: link
+        label: File
+        description: file upload for the tastry PDF
       - type: text
         name: title
         label: title
+        description: 'Link title for the tastry sheet download link. Use the following
+          naming convention. '
+      description: file and link titles for the tastry sheets
     description: use the add item button to add new wines
 - type: field_group
   name: newsroom
