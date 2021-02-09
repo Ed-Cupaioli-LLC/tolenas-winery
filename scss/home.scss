@@ -18,6 +18,14 @@
       @include text-shadow;
       color: $white;
       padding-bottom: 1rem;
+      opacity: 0;
+      transform: translateY(50%);
+      @include transition(transform,opacity);
+      transition-duration: 0.7s;
+      &.active {
+        opacity: 1;
+        transform: translateY(0%);
+      }
       .hero-title {
         font-size: 42px;
         color: $white;

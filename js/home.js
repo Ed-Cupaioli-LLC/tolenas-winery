@@ -98,8 +98,18 @@ $(function(){
     e.preventDefault();
     
     $('html,body').animate({
-      scrollTop: $('#footer-signup').offset().top - 88
+      scrollTop: $('#footer-signup').offset().top
     });
     $('#footer-signup .email').focus();
+  });
+
+  setTimeout(function(){
+    $('.hero-content').addClass('active');
+  }, 1000);
+
+  $('#home-hero .section-scroll').click(function() {
+    $('html,body').animate({
+      scrollTop: $('#product-section').offset().top
+    });
   });
 });
