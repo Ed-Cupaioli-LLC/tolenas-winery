@@ -42,3 +42,5 @@ fields:
 - type: file
   name: logo
   label: logo
+pages:
+- _data/menu.yml
