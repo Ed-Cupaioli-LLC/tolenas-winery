@@ -38,6 +38,10 @@ layout: compress
     {% if page.slick == true %}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous"></script>
     {% endif %}
+    {% if page.url == '/' %}
+    <!-- IG feed -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.instagramFeed/3.0.4/jquery.instagramFeed.min.js" integrity="sha512-/z6cDTmzplKFL9sRet94DsTK8ZdXIeIj4BZAVtjDKLG/DMl9lrQeOmVXMQrpb6KWwNNvqVAy+liFguc8jGOj6Q==" crossorigin="anonymous"></script>
+    {% endif %}
     {% if site.age-gate == true %}
     <!-- age gate scripts -->
     <script src="https://cdn.jsdelivr.net/npm/js-cookie@rc/dist/js.cookie.min.js"></script>
