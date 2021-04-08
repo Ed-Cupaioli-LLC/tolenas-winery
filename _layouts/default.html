@@ -59,7 +59,7 @@ layout: compress
     <!-- Page -->
     {% if page.scripts %}
     {% for script in page.scripts %}
-    {% capture script-path %}/js/min/{{ script }}.min.js{% endcapture %}
+    {% capture script-path %}/js/min/{{ script }}.min.js?{{site.time | date: '%s'}}{% endcapture %}
     <script src="{{ script-path | relative_url }}"></script>
     {% endfor %}
     {% endif %}
