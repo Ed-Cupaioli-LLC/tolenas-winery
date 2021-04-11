@@ -1,11 +1,12 @@
 ---
-permalink: /reservation/availability/
+permalink: "/reservation/availability/"
 title: Reservations
-bg-image: /img/experience.jpg
+bg-image: "/img/experience.jpg"
+
 ---
 ## Make a reservation
 
-Tolenas now offers private tastings select Saturdays each month by appointment only. Check for reservation availability below.
+Tolenas now offers private tastings most Saturdays and Sundays each month. We highly recommend reservations. Check for reservation availability below.
 
 With your private tasting enjoy:
 
@@ -14,10 +15,14 @@ With your private tasting enjoy:
 * Bringing your own picnic or snack to accompany our selections*
 * Well spaced out tables on our shady lawn
 
-Choose your date and time and reserve your table (seats 4 people) for larger parties please feel free to email Lisa at [lisa@tolenaswinery.com](mailto:lisa@tolenaswinery.com).
+Choose your date and time from our calendar below. 
+
+We have seating times from 12-3pm. If you do not see your preferred date and time, please feel free to call the winery. 
 
 Tasting Flight- $20.00 Per Guest
 
-*Guests are welcome to bring a picnic or snacks to enjoy, but please no outside drinks.
+\*Guests are welcome to bring a picnic or snacks to enjoy, but please no outside drinks.
+
+\*Please let us know about special accommodations or needs within your party at the time of your reservation.
 
 <div id="c7-content"></div>
