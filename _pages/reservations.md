@@ -15,11 +15,9 @@ With your private tasting enjoy:
 * Bringing your own picnic or snack to accompany our selections*
 * Well spaced out tables on our shady lawn
 
-Choose your date and time from our calendar below. 
+Choose your date and time from our calendar below.
 
-We have seating times from 12-3pm. If you do not see your preferred date and time, please feel free to call the winery. 
-
-Tasting Flight- $20.00 Per Guest
+We have seating times from 12-3pm. If you do not see your preferred date and time, please feel free to call the winery.
 
 \*Guests are welcome to bring a picnic or snacks to enjoy, but please no outside drinks.
 
