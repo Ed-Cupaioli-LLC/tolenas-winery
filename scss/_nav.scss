@@ -181,32 +181,40 @@ body {
 		nav.active .nav-toggle {
 			z-index: 1;
 		}
-		#c7-cart {
-			
-		}	
 	}
 	#c7-cart {
-		& > a {
+		.c7-link {
+      position: relative;
+      &:hover {
+				text-decoration: none;
+				.c7-user-nav__cart__count {
+					color: $white;
+				}
+      }
+      .c7-user-nav__cart__title {
 			color: $gold;
       position: relative;
       margin-right: 2rem;
       top: 5px;
+      svg {
+        display: none;
+      }
       @include bp-small {
         margin-right: 1rem;
       }
-			&:hover {
-				text-decoration: none;
-				.c7-cart__count {
-					color: $white;
-				}
-      }
+			
       &:before {
         content: '\f07a';
         font-family: "Font Awesome 5 Free"; 
         font-weight: 900;
         font-size: 28px;
       }
-			.c7-cart__count {
+      
+			.c7-cart__total {
+				display: none;
+			}
+    }
+    .c7-user-nav__cart__count {
 				background-color: $black;
 				height: 20px;
         width: 20px;
@@ -218,12 +226,10 @@ body {
 				border-radius: 50%;
 				vertical-align: middle;
 				position: absolute;
-    		top: -10px;
-    		right: -10px;
+    		top: 12px;
+    		right: 20px;
 			}
-			.c7-cart__total {
-				display: none;
-			}
+			
 		}
 		.c7-cart {
 			width: 500px;
