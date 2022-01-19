@@ -28,10 +28,12 @@ $(function(){
       success: function(data) {
         $(this).find('.result-msg').text('Thanks for signing up!');
         $(this).find('.form-body').slideUp();
+        console.log(data);
       },
       error: function(data) {
         var errorData = $.parseJSON(data.responseText);
         var errors = errorData.errors;
+        console.log(data);
         $(errors).each(function(i,err) {
           
           $(this).find('.result-msg').text(err.message);
