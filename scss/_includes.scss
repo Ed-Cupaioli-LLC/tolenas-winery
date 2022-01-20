@@ -96,6 +96,15 @@
 .email-signup {
   background-color: $gold;
   padding: 0.5rem 0;
+  .sms-optin {
+    text-align: center;
+    color: $white;
+    margin-top: 1rem;
+    text-transform: uppercase;
+    a {
+      font-weight: bold;
+    }
+  }
   .c7-subscribe {
     max-width: $size-medium;
     margin: auto;
