@@ -3,12 +3,20 @@
 #shop {
   .c7-product-collection {
     justify-content: center;
-    .c7-product {
-      display: block;
-      width: 33.33333%;
-      padding: 1rem;
+    
+    .c7-product-collection__product-list {
+      grid-template-columns: repeat(3,1fr);
       @include bp-medium {
-        width: 100%;;
+        grid-template-columns: repeat(2,1fr);
+        gap: 1rem;
+      }
+      @include bp-small {
+        grid-template-columns: repeat(1,1fr);
+      }
+      .c7-product {
+      flex-direction: column;
+      .c7-product__title {
+        font-family: $body-font;
       }
       .c7-product__photo {
         height: 300px;
@@ -63,8 +71,14 @@
         .c7-product__teaser {
           display: none;
         }
+        .c7-btn {
+          margin: 0;
+          height: 45px;
+        }
 
       }
     }
+    }
+    
   }
 }

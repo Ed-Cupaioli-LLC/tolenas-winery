@@ -1,18 +1,22 @@
 @import "vars.scss";
 @import "mixins.scss";
-.c7-layout__product-detail {
+
   #c7-content {
+    padding: 2rem;
     .c7-product-detail {
-      flex-direction: row-reverse;
+      max-width: $size-large;
+      margin: auto;
+      display: flex;
+      
+      gap: 2rem;
       @include bp-medium {
-        display: block;
+        flex-direction: column;
       }
       .c7-product-detail__photo {
-        padding-right: 2rem;
-        @include bp-medium {
-          padding-right: 0;
-        }  
         flex: 1 0 50%;
+        @include bp-medium {
+          width: 100%;
+        }
         img {
           max-height: 400px;
         }
@@ -36,9 +40,9 @@
       }
       .c7-product-detail__info {
         flex: 1 0 50%;
-
         @include bp-medium {
           text-align: left;
+          
         }
         h1 {
           text-align: left;
@@ -46,8 +50,10 @@
         .c7-product-specs {
           display: none;
         }
-
-
+        .c7-btn {
+          margin: 0;
+          height: 45px;
+        }
         .c7-product__variant__add-to-cart {
           justify-content: left;
         }
@@ -56,4 +62,3 @@
     }
     
   }
-}

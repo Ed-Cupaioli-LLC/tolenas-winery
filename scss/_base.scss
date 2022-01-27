@@ -136,7 +136,7 @@ main {
 		outline: none;
 	}	
 }
-.btn,button.c7-button, a.c7-button {
+.btn, .c7-btn {
 	text-transform: uppercase;
 	background-color: $black;
 	color: $gold;
@@ -144,15 +144,18 @@ main {
 	font-weight: 400;
 	font-size: 18px;
 	margin: 1rem 0;
+	border-radius: 0;
 	display: inline-block;
+	min-height: 0;
 	//c7 overrides
 	border: none;
 	font-family: inherit;
-	line-height: inherit;
+	line-height: normal;
 	@include transition(color, background-color);
-	&:hover,&:active, &:focus {
+	&:hover, &:focus {
 		border: none;
 		color: $white;
+		background-color: $black;
 		cursor: pointer;
 	}
 	&.white {
@@ -162,6 +165,21 @@ main {
 			background-color: $black;
 			color: $white;
 		}	
+	}
+	&.c7-btn--primary {
+		&:hover, &:focus {
+			color: $white;
+			background-color: $black;
+		}
+	}
+	&.c7-btn--alt {
+		background-color: $white;
+		color: $black;
+		border: 2px solid $black;
+		&:hover,&:active, &:focus {
+			background-color: $black;
+			color: $white;
+		}
 	}
 }
 
@@ -182,42 +200,11 @@ body {
 		nav.active .nav-toggle {
 			z-index: 1;
 		}
-		#c7-cart {
-			
-		}	
 	}
-	#c7-cart {
-		& > a {
-			color: $white;
-			position: relative;
-			&:hover {
-				text-decoration: none;
-				.c7-cart__count {
-					color: $white;
-				}
-			}
-			.c7-cart__count {
-				background-color: $black;
-				height: 1.5em;
-				width: 1.5em;
-				display: inline-block;
-				border-radius: 50%;
-				font-size: 16px;
-				vertical-align: middle;
-				line-height: 1.4;
-				position: absolute;
-    		top: 4px;
-    		right: -1.75em;
-			}
-			.c7-cart__total {
-				display: none;
-			}
-		}
-		.c7-cart {
-			width: 500px;
-			@include bp-medium {
-				width: 100%;
-			}
+	.c7-link {
+		color: $black;
+		svg {
+			stroke: $black;
 		}
 	}
 	.c7-reservation-widget .c7-form__group {
@@ -230,15 +217,19 @@ body {
 	.c7-form select, .c7-form input[type='text'], .c7-form input[type='email'], .c7-form input[type='tel'], .c7-form input[type='password'], .c7-form input[type='username'], .c7-form .c7-input-sudo {
 		font-family: inherit;
 	}
-	#c7-checkout-content {
-		z-index: 9 !important;
-		margin-top: $nav-height !important;
-	}
+	
 	.c7-checkout-template {
 		a {
 			text-decoration: underline;
 			&:hover {
 				cursor: pointer;
+			}
+		}
+	}
+	#c7-content {
+		&.c7-content--checkout {
+			.c7-breadcrumbs {
+				margin-top: 0;
 			}
 		}
 	}	

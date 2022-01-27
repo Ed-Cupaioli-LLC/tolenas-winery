@@ -1,0 +1,42 @@
+[[redirects]]
+  from = "/collection/*"
+  to = "/collection"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/product/*"
+  to = "/product"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/profile/*"
+  to = "/profile"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/cart/*"
+  to = "/cart"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/cart/*"
+  to = "/cart"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}
+[[redirects]]
+  from = "/checkout/*"
+  to = "/checkout"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"} 
+[[redirects]]
+  from = "/club/*"
+  to = "/club"
+  status = 200
+  force = true
+  headers = {X-From = "Netlify"}      

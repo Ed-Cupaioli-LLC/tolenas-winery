@@ -1,8 +1,9 @@
 ---
-permalink: "/reservation/availability/"
+permalink: "/reservation/"
 title: Reservations
 bg-image: "/img/experience.jpg"
-
+scripts:
+- reservations
 ---
 ## Make a reservation
 
