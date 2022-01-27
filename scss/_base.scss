@@ -208,7 +208,13 @@ body {
 		}
 	}
 	.c7-reservation-widget .c7-form__group {
-		align-items: flex-end;
+		align-items: flex-start;
+		.c7-btn {
+			margin: 2rem 0 0 1rem;
+			@include bp-medium {
+				margin: 1rem 0 0 0;
+			}
+		}
 		
 	}
 	.c7-form label, .c7-form .label {
