@@ -1,13 +1,22 @@
 $(function () {
   $.ajax({
-    url: "https://feeds.behold.so/NZEi7ZBeDqPGB3tBlkQt",
+    url: "https://feeds.behold.so/ebeDTCCi9bfMrQyh0MxC",
     dataType: 'json',
     success: function(data) {
       var igFeed = data;
       console.log(data);
       $(igFeed).each(function(i,post) {
+        var mediaType = post.mediaType;
         var postLink = post.permalink;
-        var postImage = post.mediaUrl;
+
+        var postImage;
+        if (mediaType == 'IMAGE') {
+          postImage = post.mediaUrl;
+        } else if (mediaType == 'VIDEO') {
+          postImage = post.thumbnailUrl;
+        } else if (mediaType == 'CAROUSEL_ALBUM') {
+          postImage = post.children[0].mediaUrl;
+        }
         var postText = post.caption;
         var slide = '<div class="insta-slide" data-link="'+postLink+'" >'+
                       '<div class="slide-content">'+
@@ -40,30 +49,6 @@ $(function () {
       }); 
     } 
   });  
-  // fetch("https://feeds.behold.so/NZEi7ZBeDqPGB3tBlkQt")
-  //   .then((data) => data.json())
-  //   .then((photos) => {
-  //     photos.forEach(
-  //       ({
-  //         id, // The post ID
-  //         mediaUrl, // The image source
-  //         permalink, // URL of the Instagram post
-  //         caption, // Post caption
-  //         mediaType, // 'IMAGE', 'VIDEO', or 'CAROUSEL_ALBUM'
-  //         thumbnailUrl, // Only returned for video posts
-  //         timestamp, // Post publish date,
-  //         children, // An array of CAROUSEL_ALBUM children. Each with id, mediaUrl, mediaType and thumbnailUrl
-  //       }) => {
-  //       var slide = '<div class="insta-slide" data-shortcode="'+shortCode+'" data-imagefull="'+imgFull+'" >'+
-  //                     '<div class="slide-content">'+
-  //                       '<img alt="'+mediaUrl+'" src="'+permalink+'" class="slide-img" />'+
-  //                       '<div class="slide-text hidden">'+caption.replace(/\n/g, "<br />")+'</div>'+
-  //                     '</div>'+
-  //                   '<div>';
-  //         $("#ig-slider").append(slide);
-  //       }
-  //     );
-  //   });
   $(".close-embed").click(function () {
     $(".post-embed-container,body,html").removeClass("active");
     $(".insta-image").attr("src", "");
