@@ -101,8 +101,12 @@
     color: $white;
     margin-top: 1rem;
     text-transform: uppercase;
+    display: none;
+    @include bp-small {
+      display: inline-block;
+    }
     a {
-      font-weight: bold;
+      margin: 0;
     }
   }
   .c7-subscribe {

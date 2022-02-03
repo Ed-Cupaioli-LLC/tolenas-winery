@@ -16,6 +16,9 @@ cart: "/cart/"
 login: "/profile/login/"
 terms: "/terms/"
 address: 4185 CHADBOURNE RD., FAIRFIELD CA, 94534
+text-optin: 
+  text: Text Opt-in
+  link: sms:+18443589244;?&body=wine
 social:
 - title: Facebook
   icon: <i class="fab fa-facebook-f"></i>
