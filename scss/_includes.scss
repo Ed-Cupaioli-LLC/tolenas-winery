@@ -96,6 +96,11 @@
 .email-signup {
   background-color: $gold;
   padding: 0.5rem 0;
+  .signup-body {
+    max-width: 410px;
+    margin: auto;
+    text-align: center;
+  }
   .sms-optin {
     text-align: center;
     color: $white;
@@ -108,6 +113,12 @@
     a {
       margin: 0;
     }
+  }
+  .form-title {
+    color: $white;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.25rem;
   }
   .c7-subscribe {
     max-width: $size-medium;
@@ -122,6 +133,7 @@
         margin-bottom: 0;
       }
     }
+    
     .c7-form {
       margin: auto;
       .c7-message--alert-error {
@@ -131,6 +143,8 @@
         display: flex;
         gap: 1rem;
         align-items: center;
+        justify-content: center;
+        flex-flow: row nowrap;
         
         .c7-btn--primary {
           background-color: $white;
@@ -169,17 +183,20 @@
         margin-bottom: 0;
         justify-content: flex-end;
         flex-flow: row wrap;
+        
         @include bp-small {
           justify-content: center;
-        }
-        &:before {
-          display: 'block';
-          content: 'Keep your ear to the ground';
-          text-transform: uppercase;
-          color: $white;
+          flex: 0 1 auto;
         }
         label {
-          display: none;
+          color: $white;
+          text-transform: uppercase;
+          font-size: 1rem;
+          padding: 0;
+          line-height: normal;
+          &::after {
+            display: none;
+          }
         }
         input {
           font-size: 14px;
@@ -190,7 +207,11 @@
           width: auto;
           height: auto;
           line-height: normal;
+          @include bp-small {
+            min-width: 0px;
+          }
           &::placeholder {
+            content: 'Email';
             text-transform: uppercase;
             font-weight: inherit;
           }
