@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Title and Meta Text -->
 {% if page.title %}
 {% capture title  %}
-{{page.title}} | {{site.title}}
+{{page.title}} {{site.title}}
 {% endcapture %}
 {% else %}
 {% assign title = site.title %}

@@ -4,7 +4,7 @@
   .c7-product-collection {
     justify-content: center;
     
-    .c7-product-collection__product-list {
+    &__product-list {
       grid-template-columns: repeat(3,1fr);
       @include bp-medium {
         grid-template-columns: repeat(2,1fr);
@@ -15,10 +15,10 @@
       }
       .c7-product {
       flex-direction: column;
-      .c7-product__title {
+      &__title {
         font-family: $body-font;
       }
-      .c7-product__photo {
+      &__photo {
         height: 300px;
         a {
           position: relative;
@@ -57,7 +57,7 @@
           }
         }
       }
-      .c7-product__info {
+      &__info {
         width: 100%;
         .c7-product__title.c7-title {
           margin-top: 1rem;
