@@ -12,7 +12,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 <!-- Title and Meta Text -->
 {% if page.title %}
 {% capture title  %}
-{{page.title}} {{site.title}}
+{{page.title}} || {{site.title}}
 {% endcapture %}
 {% else %}
 {% assign title = site.title %}
@@ -99,6 +99,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   /css/{{ page.css }}.min.css?{{site.time | date: '%s'}}
 {%- endcapture -%}
 <link rel="stylesheet" href="{{ css-path | trim | relative_url }}">
+{% endif %}
+{% if jekyll.environment == "development" %}
+<link rel="stylesheet" href="{{ "/css/collection.min.css" | relative_url }}?{{site.time | date: '%s'}}">
 {% endif %}
 <!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css" integrity="sha512-1PKOgIY59xJ8Co8+NE6FZ+LOAZKjy+KY8iq0G4B3CyeY6wYHN3yt9PW0XpSriVlkMXe40PTKnXrLnZ9+fkDaog==" crossorigin="anonymous" />

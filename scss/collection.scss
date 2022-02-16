@@ -1,0 +1,30 @@
+@import "mixins.scss"; 
+@import "vars.scss";
+.c7-product-collection {
+  max-width: $size-medium;
+  margin: auto;
+  
+  &__product-list {
+    .c7-product {
+      gap: 2rem;
+      flex-direction: column;
+      &__photo {
+        a {
+          display: block;
+          height: 300px;
+          margin: auto;
+          position: relative;
+          img {
+            position: absolute;
+            object-fit: cover;
+            height: 100%;
+            width: 100%;
+          }
+        } 
+      }
+      &__teaser {
+        display: none;
+      }
+    }
+  }
+}
