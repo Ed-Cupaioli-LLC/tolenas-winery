@@ -13,7 +13,7 @@ nav:
 - title: Trade & Media
   url: "/trade-media/"
 cart: "/cart/"
-login: "/profile/login/"
+login: '<div id="c7-account"></div>'
 terms: "/terms/"
 address: 4185 CHADBOURNE RD., FAIRFIELD CA, 94534
 text-optin: 

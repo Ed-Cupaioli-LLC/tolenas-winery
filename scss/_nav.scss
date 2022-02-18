@@ -110,6 +110,22 @@ nav {
             color: $black;
           }
         }
+        #c7-account {
+          .c7-user-nav {
+            &__account {
+              padding-right: 0;
+              &__login {
+                color: $white;
+                padding: 9.5px 0;
+                font-size: 19px;
+                &:active,&:hover {
+                  color: $black;
+                }
+              }
+            }
+          }
+          
+        }
       }
     }
     .social-links {
