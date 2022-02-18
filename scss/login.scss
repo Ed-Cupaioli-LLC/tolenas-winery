@@ -2,7 +2,11 @@
 @import "mixins.scss";
 #login {
   min-height: 100vh;
-  
+  .c7-account-login {
+    &__alt-login button {
+      color: $black; 
+    }
+  }
 
   #c7-login-form {
     max-width: $size-small;
