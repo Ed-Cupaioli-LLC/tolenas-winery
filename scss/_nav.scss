@@ -114,13 +114,25 @@ nav {
           .c7-user-nav {
             &__account {
               padding-right: 0;
-              &__login {
+              & > a {
                 color: $white;
                 padding: 9.5px 0;
                 font-size: 19px;
                 &:active,&:hover {
                   color: $black;
+                  & > svg {
+                    stroke: $black;
+                  }
                 }
+                & > svg {
+                  stroke: $white;
+                  @include transition(stroke);
+                }
+              }
+              &__dropdown {
+                left: 50%;
+                right: auto;
+                transform: translateX(-50%);
               }
             }
           }
