@@ -25,6 +25,6 @@ Large Parties (6+ people)
 
 \*Guests are welcome to bring a picnic or snacks to enjoy, but please no outside drinks.
 
-\*Please let us know about special accommodations or needs within your party at the time of your reservation. 
+\*Please let us know about special accommodations or needs within your party at the time of your reservation.
 
 <div id="c7-content"></div>
