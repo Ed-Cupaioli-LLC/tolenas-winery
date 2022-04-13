@@ -2,6 +2,7 @@
 permalink: "/reservation/availability/"
 title: Reservations
 bg-image: "/img/experience.jpg"
+published: false
 
 ---
 ## Make a reservation
