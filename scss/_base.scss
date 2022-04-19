@@ -142,9 +142,11 @@ main {
 		outline: none;
 	}	
 }
-.btn, .c7-btn {
+.btn, .c7-btn, a.btn {
 	text-transform: uppercase;
 	background-color: $black;
+	font-weight: normal;
+	text-decoration: none;
 	color: $gold;
 	padding: 0.5rem 1.5rem;
 	font-weight: 400;

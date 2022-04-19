@@ -272,7 +272,7 @@ newsroom:
           {% for logo in page.brand-assets.logos %}
           <div class="logo-col">
             {% assign display-image = logo.images | where_exp: "image", "image contains '.png'" %}
-            <img src="{{ display-image }}" class="logo-image"/>
+            <img src="{{ display-image }}" class="logo-image" alt="{{ logo.title }}" />
             <div class="logo-title">{{ logo.title }}</div>
             <div class="logo-links">
               {% for image in logo.images %}
@@ -291,7 +291,7 @@ newsroom:
           {% for photo in page.brand-assets.photos %}
           <div class="photo-col">
             <div class="photo-image-box">
-              <img class="photo-image" src="{{ photo.image.thumb }}"/> 
+              <img class="photo-image" src="{{ photo.image.thumb }}" alt="{{ photo.title }}"/> 
             </div>
             <a class="photo-link" download href="{{ photo.image.original }}">{{ photo.title }}</a>
           </div>
@@ -318,7 +318,7 @@ newsroom:
           {% for video in page.brand-assets.videos %}
           <div class="video-col">
             <a class="video-link" href="https://www.youtube.com/watch?v={{ video.id }}">
-            <img class="video-thumb" src="https://img.youtube.com/vi/{{video.id}}/mqdefault.jpg" />
+            <img class="video-thumb" src="https://img.youtube.com/vi/{{video.id}}/mqdefault.jpg" alt="{{ video.title }} thumbnail"/>
             <div class="video-title">{{ video.title }}</div>
             </a>
           </div>
@@ -339,7 +339,7 @@ newsroom:
         {% for wine in page.wine-portfolio.wines %}
         <div class="portfolio-col">
           <div class="wine-image">
-            <img src="{{ wine.image }}" class="wine-image-src"/>
+            <img src="{{ wine.image }}" class="wine-image-src" alt="{{ wine.title }} bottle"/>
           </div>
           <div class="wine-info">
             <div class="btn">{{ wine.title }}</div>
