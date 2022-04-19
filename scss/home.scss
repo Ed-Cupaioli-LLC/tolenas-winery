@@ -139,14 +139,19 @@
             .link-image {
               transform: scale(1.2);
             }
+            .link-title {
+              color: $black;
+            }
           }
           .link-title {
             color: $white;
             position: absolute;
             z-index: 2;
+            margin: 0;
             top: 50%;
             left: 50%;
             transform: translate(-50%,-50%);
+            @include transition(color);
           }
           .link-image {
             width: 100%;
@@ -154,6 +159,7 @@
             object-position: center;
             object-fit: cover;
             @include transition(transform);
+            -webkit-backface-visibility: hidden;
           }
         }
       }

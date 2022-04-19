@@ -30,20 +30,20 @@ h1, h2, h3, h4, h5 {
 b,strong {
 	font-weight: 500;
 }
-h1 {
+h1, .heading-1 {
 	font-size: 40px;
 	@include bp-medium {
 		font-size: 30px;
 	}
 }
-h2 {
+h2, .heading-2 {
 	font-size: 34px;
 	@include bp-medium {
 		font-size: 26px;
 	}	
 }
 
-h4 {
+h4, .heading-4 {
 	font-size: 24px;
 }
 //Links
