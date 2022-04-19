@@ -10,8 +10,12 @@ main {
     ul,ol {
       padding-left: 1em;
     }
-    a {
-      color: $gold;
+    p {
+      a:not(.btn) {
+        font-weight: bold;
+        text-decoration: underline;
+      }
     }
+    
   }
 }

@@ -15,9 +15,9 @@ $(function(){
         const productSlide = '<div class="product-slide">'+
                               '<a href="/product/'+obj.slug+'" class="slide-inner">'+
                               '<div class="slide-img">'+
-                                '<img src="'+obj.image+'" />'+
+                                '<img src="'+obj.image+'" alt="'+obj.title+'"/>'+
                                 '<div class="slide-title">'+
-                                  '<h4>'+obj.title+'</h4>'
+                                  '<div class="heading-4">'+obj.title+'</div>'
                                 '</div>'+
                               '</div>'+
                               '</a>'+

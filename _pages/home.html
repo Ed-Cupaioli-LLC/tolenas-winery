@@ -22,12 +22,15 @@ products:
 links:
 - title: Story
   image: "/img/story-card.jpg"
+  image-alt: "Grape buds on a vine"
   url: "/story/"
 - title: Shop
   image: "/img/shop-card.jpg"
+  image-alt: "Tolenas wine bottles lined up horizontally"
   url: "/shop/"
 - title: Visit
   image: "/img/visit-card.jpg"
+  image-alt: "People wating a meal at a table with filled wine glasses that have Tolenas branding visible"
   url: "/visit/"
 
 ---
@@ -58,7 +61,7 @@ links:
     <div class="link-col">
       <a class="link" href="{{link.url}}" >
         <h1 class="link-title">{{ link.title }}</h1>
-        <img src="{{ link.image }}" class="link-image" />
+        <img src="{{ link.image }}" class="link-image" alt="{{ link.image-alt }}"/>
       </a>
     </div>
     {% endfor %}
@@ -75,11 +78,11 @@ links:
         <div class="close-embed"><span class="close-x">&times;</span></div>
         <div class="insta-embed">
 					<div class="image-col">
-						<a class="insta-link" href=""><img  loading="lazy" class="insta-image" src="" alt="" /></a>
+						<a class="insta-link" aria-label="View on Instagram" href="#"><img  loading="lazy" class="insta-image" src="" alt="" /></a>
 					</div>
 					<div class="text-col">
 						<div class="insta-caption"></div>
-						<a class="insta-link btn" href=""><i class="fab fa-instagram"></i>View on Instagram</a>
+						<a class="insta-link btn" aria-label="View on Instagram" href="#"><i class="fab fa-instagram"></i>View on Instagram</a>
 					</div>
 				</div>
       </div>

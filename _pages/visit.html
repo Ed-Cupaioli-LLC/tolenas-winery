@@ -17,7 +17,9 @@ sections:
       Located in a red barn and standing next to a picturesque white Victorian home, our winery celebrates the agricultural heritage of Suisun Valley. This home was where Lisa and her three siblings grew up sorting cherries and peaches for their family fruit stand.
 
       Come visit us at 4185 Chadbourne Rd, Fairfield, CA 94534
-    image: "/img/suisun_valley.jpg"
+    image: 
+      src: "/img/suisun_valley.jpg"
+      alt: "Vinyards in a valley"
   - title: Love Suisun Valley Like We Do
     text: |2-
 
@@ -27,14 +29,18 @@ sections:
     button:
       text: View map
       link: "/img/love_suisun_valley_like_we_do.jpg"
-    image: "/img/love_suisun_valley_like_we_do-600x789.jpg"
+    image: 
+      src: "/img/love_suisun_valley_like_we_do-600x789.jpg"
+      alt: "Street map of Suisun Valley with Tolenas Winery location shown"
     map: true
   - title: Suisun Valley AVA
     text: |-
       Just one year after Napa, the Suisun Valley has been designated as an American Viticultural Area (AVA) since 1982, and has been recognized as a longtime producer of some of California’s finest grapes. Vineyards were first planted in Suisun in 1860, and generations of Californians have since continued to care for vines on the sloping brownhills and sprawling valley floor.
 
       As second-generation farmers, we’ve continued this agricultural legacy, both in the vineyard and the orchard. We are passionate about protecting this land and strive to create wines that honor both the integrity of the fruit and the place where it was grown.
-    image: "/img/suisun_valley_AVA_REV-725x1024.jpg"
+    image: 
+      src: "/img/suisun_valley_AVA_REV-725x1024.jpg"
+      alt: "Geographical map of Suisun Valley in relation to Napa and Solano"
     map: true
 - title: Our Land
   image: "/img/our_land_menu.jpeg"
@@ -44,14 +50,18 @@ sections:
       matter of principle, it’s personal. Our properties are our home, the vineyards
       are our backyard, and our children are growing up among the vines. Three generations
       of our family tend to these grapes, and we wouldn’t want it any other way.
-    image: "/img/our_land.jpg"
+    image:
+      src: "/img/our_land.jpg"
+      alt: "Cliff and Lisa Howard walking through an orchard"
   - title: Upper Valley Vineyard
     text: Located in the warm upper valley of Suisun, this is our home ranch where
       we raise our three children among the vineyards. Both planted in 2015, Petite
       Sirah grows among the valley floor while the Zinfandel vines sprawl on the red
       dirt hillside. We plant with intention. Coastal breezes are buffered by the
       sloping canyon producing a thick-skinned grape rich with flavor.
-    image: "/img/upper_valley_vineyard.jpg"
+    image: 
+      src: "/img/upper_valley_vineyard.jpg"
+      alt: "View from inside a person driving a tractor overlooking a vineyard"
   - title: WINERY ESTATE
     text: On the south side of the valley bordered by mountains, the winery estate
       vineyard wraps around the winery and the house. Being the coolest part of the
@@ -59,7 +69,9 @@ sections:
       fog. At Tolenas, we plant with intention, the Pinot Noir vines are close to
       the winery so they don’t have to travel as far. It is that level of care and
       attention that makes our wines so good.
-    image: "/img/winery_estate.jpg"
+    image: 
+      src: "/img/winery_estate.jpg"
+      alt: "Lisa Howard holding grapes growing in a vineyard"
   - title: ORCHARD
     text: The family farm doesn’t start and stop with grapes. While grapes are Suisun
       Valley’s largest crop, our family has been growing fruits and vegetables here
@@ -79,16 +91,21 @@ sections:
     button:
       text: Make a reservation
       link: "/reservation/"
-    image: "/img/experience.jpg"
+    image: 
+      src: "/img/experience.jpg"
+      alt: "People standing around a lit tree in the Winery's tasting area"
   - title: JOIN THE CLUB
     text: Join our wine club and become part of our family. Perks include private
       tastings, promotions, and special events.
     button:
       text: Join
       link: "/club/"
-    image: "/img/join_the_club.jpg"
+    image: 
+      src: "/img/join_the_club.jpg"
+      alt: "Close up of a Tolenas Winery wine bottle with two glasses"
 - title: Reservations
   image: "/img/reservations_menu.jpeg"
+     
   content:
   - title: MAKE A RESERVATION
     text: |-
@@ -104,7 +121,9 @@ sections:
       Fairfield, CA 94534
 
       <a href="/reservation/" class="btn">Make a reservation</a>
-    image: ''
+    image: 
+      src: ''
+      alt: ''
 
 ---
 <section id="visit-content">
@@ -114,7 +133,7 @@ sections:
       {% for content in section.content %}
       <div class="content-block {% if content.map == true %}map{% endif %}">
         <div class="image-col">
-          <img class="block-image" src="{{ content.image }}"/>
+          <img class="block-image" src="{{ content.image.src }}" alt="{{ content.image.alt }}"/>
         </div>
         <div class="text-col">
           <h2 class="block-title">{{ content.title }}</h2>
