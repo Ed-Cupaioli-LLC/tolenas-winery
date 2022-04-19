@@ -88,6 +88,7 @@
         .menu-links {
           .menu-link {
             height: 100px;
+            
           }
           .visit-menu-toggle {
             i {
@@ -146,6 +147,8 @@
           transform-origin: right center;
           overflow-y: hidden;
           z-index: 2;
+          -webkit-backface-visibility: hidden;
+          
           @include bp-large {
             height: 150px;
             transform: none;
