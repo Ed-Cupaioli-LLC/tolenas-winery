@@ -27,4 +27,4 @@ Bordered by mountains and characterized by a cool coastal breeze, the wind-blown
 
 Tolenas Winery was built on a foundation of family— with a passion for this land which has abundantly provided for generations of California winemakers. Our winemaking philosophy centers the vineyard and fruits as the focus, abstaining from disturbing the vines with chemicals or unnecessary additives. Our products reflect a commitment to both protecting the land and preserving the integrity of our wines. While making wines like this is risky, we wouldn’t have it any other way.
 
-{% include button.html text="Make a reservation" link="/reservation/availability/" %}
+{% include button.html text="Make a reservation" link="/reservation/" %}
