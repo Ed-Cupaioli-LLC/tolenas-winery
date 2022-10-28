@@ -1,14 +1,12 @@
 ---
-permalink: "/reservation/"
+permalink: "/reservation/availability/"
 title: Reservations
 bg-image: "/img/experience.jpg"
 
 ---
 ## Make a reservation
 
-Tolenas is open for private tastings most Saturdays and Sundays. We offer seating times between the hours of 11pm-3pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below.
-
-**WE ARE CLOSED 4th of JULY WEEKEND**
+Tolenas is open for private tastings Saturdays and Sundays. We offer seating times between the hours of 11pm-3pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below.
 
 With your private tasting enjoy:
 
@@ -27,7 +25,7 @@ Large Parties (6+ people)
 
 \*Guests are welcome to bring a picnic or snacks to enjoy, but please no outside drinks.
 
-\*If there will be guests joining you that are under 21 years of age, please add a note in your reservation so that we may accommodate proper seating room. If needed reply to your reservation email confirmation so we are prepared for the total number of guests.  We ask that all persons under 21 fully understand this is an adult experience and must be well behaved. 
+\*If there will be guests joining you that are under 21 years of age, please add a note in your reservation so that we may accommodate proper seating room. If needed reply to your reservation email confirmation so we are prepared for the total number of guests.  We ask that all persons under 21 fully understand this is an adult experience and must be well behaved.
 
 \*We are pet friendly but dogs must be well behaved and remain on leash at all times
 
