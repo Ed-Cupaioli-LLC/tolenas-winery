@@ -101,19 +101,7 @@
     margin: auto;
     text-align: center;
   }
-  .sms-optin {
-    text-align: center;
-    color: $white;
-    margin-top: 1rem;
-    text-transform: uppercase;
-    display: none;
-    @include bp-small {
-      display: inline-block;
-    }
-    a {
-      margin: 0;
-    }
-  }
+  
   .form-title {
     color: $black;
     text-transform: uppercase;
