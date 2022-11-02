@@ -21,7 +21,7 @@ $(function () {
         var slide = '<div class="insta-slide" data-link="'+postLink+'" >'+
                       '<div class="slide-content">'+
                         '<img alt="Instagram post from Tolenas with the caption '+postText+'" src="'+postImage+'" class="slide-img" />'+
-                        '<div class="slide-text hidden">'+postText.replace(/\n/g, "<br />")+'</div>'+
+                        '<div class="slide-text hidden">' +postText +'</div>'+
                       '</div>'+
                     '<div>';  
         $('#ig-slider').append(slide);
@@ -44,11 +44,13 @@ $(function () {
         var postText = $(this).find('.slide-text').html();
         var postImage = $(this).find('.slide-img').attr('src');
         $('.insta-image').attr('src',postImage);
-        $('.insta-caption').html(postText);
+        if (postText !== 'undefined') {
+         $(".insta-caption").html(postText.replace(/\n/g, "<br />")); 
+        }
         $('.insta-link').attr('href',postLink);
       }); 
     } 
-  });  
+  });
   $(".close-embed").click(function () {
     $(".post-embed-container,body,html").removeClass("active");
     $(".insta-image").attr("src", "");
