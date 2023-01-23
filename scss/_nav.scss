@@ -161,12 +161,6 @@ nav {
         }
       }
     }
-    .text-optin {
-      display: none;
-      @include bp-small {
-        display: inline-block;
-      }
-    }
   }
   .nav-logo {
     max-width: 70%;
