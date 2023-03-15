@@ -166,7 +166,7 @@ sections:
 <div id="visit-menu">
   <div class="menu-links">
     {% for link in page.sections %}
-    <a data-cms-bind="#section[{{ forloop.index0 }}]" href="#{{ link.title | slugify }}" class="menu-link {% if forloop.first %}active{% endif %}" style="background-image: url('{{ link.image }}');">
+    <a href="#{{ link.title | slugify }}" class="menu-link {% if forloop.first %}active{% endif %}" style="background-image: url('{{ link.image }}');">
       <h2 class="link-title">
         <i class="fa fa-chevron-left"></i> {{ link.title }}
       </h2>
