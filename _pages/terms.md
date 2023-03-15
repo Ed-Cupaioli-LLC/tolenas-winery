@@ -1,8 +1,8 @@
 ---
+schema: page
 permalink: "/terms/"
 layout: page
 title: Terms
-
 ---
 ## ALL RIGHTS RESERVED
 

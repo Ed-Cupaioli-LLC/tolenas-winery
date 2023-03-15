@@ -1,8 +1,8 @@
 ---
+_schema: page
 permalink: "/reservation/"
 title: Reservations
 bg-image: "/img/experience.jpg"
-
 ---
 ## Make a reservation
 

@@ -1,4 +1,44 @@
 ---
+_enabled_editors:
+  - visual
+  - data
+_inputs:
+  $.title:
+    comment: title of the page that appears in the hero
+  $.bg-image:
+    label: background image
+    comment: background image that appears in the hero
+  $.contact:
+    type: markdown
+    comment: >-
+      the paragraph about contact information that appears below the
+      hero
+  $.brand-assets.logos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-logos
+  $.brand-assets.photos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-photos
+  $.brand-assets.bios:
+    type: array
+    options:
+      structures: _structures.trade-media-page-bios
+  $.brand-assets.videos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-videos
+  $.wine-portfolio.wines:
+    type: array
+    comment: use the add item button to add new wines
+    options:
+      structures: _structures.trade-media-page-wines
+  $.newsroom.stories:
+    type: array
+    comment: Add and order multiple stories here. Select the add item button
+    options:
+      structures: _structures.trade-media-page-stories
 title: Trade & Media
 permalink: "/trade-media/"
 bg-image: "/img/grapes-bg.jpg"
@@ -183,7 +223,7 @@ wine-portfolio:
     tastry:
     - link: ''
       title: ''
-newsroom:
+newsroom:  
   stories:
   - title: Great Wines, Wine Experiences and Wine Tools to Complete Your Celebration
     outlet: Splash Magazines
@@ -241,7 +281,7 @@ newsroom:
 ---
 {% include hero.html %}
 <section id="contact-section">
-  <div class="inner-section">
+  <div class="inner-section" data-cms-bind="#contact">
     {{ page.contact | markdownify }}  
   </div>
 </section>
@@ -250,7 +290,7 @@ newsroom:
     <div class="category-menu">
       {% for category in page.media-categories %}
       <div class="menu-col">
-        <a href="#{{ category.title | slugify }}" style="background-image: url({{ category.image }});" class="menu-link {% if forloop.first %}active{% endif %}">
+        <a data-cms-bind="#media-categories[{{ forloop.index0 }}]" href="#{{ category.title | slugify }}" style="background-image: url({{ category.image }});" class="menu-link {% if forloop.first %}active{% endif %}">
           <h2>{{ category.title }}</h2>  
         </a>
       </div>
@@ -262,7 +302,7 @@ newsroom:
   <div class="inner-section">
     <div class="content-nav">
       {% for link in page.brand-assets.links %}
-      <a href="#{{ link | slugify }}" class="nav-link btn {% if forloop.first %}active{% endif%}">{{ link }}</a>
+      <a data-cms-binding="#brand-assets.links[{{ forloop.index0 }}]" href="#{{ link | slugify }}" class="nav-link btn {% if forloop.first %}active{% endif%}">{{ link }}</a>
       {% endfor %}
     </div>
     <div class="content-body">
@@ -270,7 +310,7 @@ newsroom:
       <div class="content-block active" id="logos">
         <div class="logo-grid">
           {% for logo in page.brand-assets.logos %}
-          <div class="logo-col">
+          <div data-cms-bind="#brand-assets.logos[{{ forloop.index0 }}]" class="logo-col">
             {% assign display-image = logo.images | where_exp: "image", "image contains '.png'" %}
             <img src="{{ display-image }}" class="logo-image" alt="{{ logo.title }}" />
             <div class="logo-title">{{ logo.title }}</div>
@@ -289,7 +329,7 @@ newsroom:
       <div class="content-block" id="photos">
         <div class="photos-grid">
           {% for photo in page.brand-assets.photos %}
-          <div class="photo-col">
+          <div class="photo-col" data-cms-bind="#brand-assets.photos[{{ forloop.index0 }}]">
             <div class="photo-image-box">
               <img class="photo-image" src="{{ photo.image.thumb }}" alt="{{ photo.title }}"/> 
             </div>
@@ -302,7 +342,7 @@ newsroom:
       <div class="content-block" id="bios">
         <div class="bio-grid">
           {% for bio in page.brand-assets.bios %}
-          <div class="bio-col">
+          <div class="bio-col" data-cms-bind="#brand-assets.bios[{{ forloop.index0 }}]">
             <div class="bio-name">{{ bio.name }}</div>
             {% if bio.title.size > 0 %}
             <div class="bio-title">{{ bio.title }}</div>
@@ -316,7 +356,7 @@ newsroom:
       <div class="content-block" id="videos">
         <div class="video-grid">
           {% for video in page.brand-assets.videos %}
-          <div class="video-col">
+          <div class="video-col" data-cms-bind="#brand-assets.videos[{{ forloop.index0 }}]">
             <a class="video-link" href="https://www.youtube.com/watch?v={{ video.id }}">
             <img class="video-thumb" src="https://img.youtube.com/vi/{{video.id}}/mqdefault.jpg" alt="{{ video.title }} thumbnail"/>
             <div class="video-title">{{ video.title }}</div>
@@ -334,10 +374,9 @@ newsroom:
       <a class="btn nav-link active" href="#wine-portfolio">Wine Portfolio</a>
     </div>
     <div class="content-body">
-      
       <div class="portfolio-grid">
         {% for wine in page.wine-portfolio.wines %}
-        <div class="portfolio-col">
+        <div class="portfolio-col" data-cms-bind="#wine-portfolio.wines[{{ forloop.index0 }}]">
           <div class="wine-image">
             <img src="{{ wine.image }}" class="wine-image-src" alt="{{ wine.title }} bottle"/>
           </div>
@@ -362,7 +401,7 @@ newsroom:
     <div class="content-body">
       <div class="story-list">
         {% for story in page.newsroom.stories %}
-        <div class="story">
+        <div class="story" data-cms-bind="#newsroom.stories[{{forloop.index0}}]">
           <i class="fa fa-chevron-right"></i>
           <span class="story-date">{{ story.date }}</span>
           <a href="{{ story.link }}" class="story-link">{{ story.outlet}}, {{ story.title }}</a>

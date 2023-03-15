@@ -14,48 +14,6 @@ collections_config:
           $.bg-image:
             label: Background Image
             comment: the background image that will appear in the hero
-      trade-media-page:
-        path: .cloudcannon/schemas/trade-media-page.md
-        name: Trade & Media Page
-        _enabled_editors:
-          - data
-        _inputs:
-          $.title:
-            comment: title of the page that appears in the hero
-          $.bg-image:
-            label: background image
-            comment: background image that appears in the hero
-          $.contact:
-            type: markdown
-            comment: >-
-              the paragraph about contact information that appears below the
-              hero
-          $.brand-assets.logos:
-            type: array
-            options:
-              structures: _structures.trade-media-page-logos
-          $.brand-assets.photos:
-            type: array
-            options:
-              structures: _structures.trade-media-page-photos
-          $.brand-assets.bios:
-            type: array
-            options:
-              structures: _structures.trade-media-page-bios
-          $.brand-assets.videos:
-            type: array
-            options:
-              structures: _structures.trade-media-page-videos
-          $.wine-portfolio.wines:
-            type: array
-            comment: use the add item button to add new wines
-            options:
-              structures: _structures.trade-media-page-wines
-          $.newsroom.stories:
-            type: array
-            comment: Add and order multiple stories here. Select the add item button
-            options:
-              structures: _structures.trade-media-page-stories
       visit-page:
         path: .cloudcannon/schemas/visit-page.md
         name: Visit Page
@@ -257,6 +215,8 @@ _structures:
 _inputs:
   template:
     hidden: true
+  layout: 
+    hidden: true  
   nav_class: 
     hidden: true
   css: 
@@ -267,7 +227,7 @@ _inputs:
     hidden: true
   scripts: 
     hidden: true
-  title: 
+  $.title: 
     comment: 'The title for your page used in the CMS and social media sharing.'
   permalink: 
     comment: 'The URL path to your page. start and end with forward slashes, eg /about/.'  

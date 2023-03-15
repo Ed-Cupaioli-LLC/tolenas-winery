@@ -4,7 +4,6 @@ layout: page
 permalink: "/story/"
 title: Story
 bg-image: "/img/story-banner.jpg"
-
 ---
 {% include video.html link="https://player.vimeo.com/video/430150845?byline=0&title=0&portrait=0" title="Tolenas Winery - Storytelling Video" %}
 
