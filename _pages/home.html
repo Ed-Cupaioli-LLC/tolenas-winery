@@ -1,4 +1,18 @@
 ---
+_enabled_editors:
+  - data
+_inputs:
+  $.hero.links:
+    type: array
+    options:
+      structures: _structures.menu-nav
+  $.links:
+    type: array
+    options:
+      structures: _structures.home-page-links
+  $.products.collection-slug:
+    comment: 'The collection slug will determine what products are shown. Find the slug by going to Commerce7 > Store > Collections, then find the slug at the bottom of the page.'
+
 title: Home Page
 layout: default
 permalink: "/"
@@ -36,10 +50,10 @@ links:
 ---
 <section id="home-hero">
   <div class="hero-content">
-    <h1 class="hero-title">{{ page.hero.title }}</h1>
+    <h1 class="hero-title" data-cms-bind="#hero.title">{{ page.hero.title }}</h1>
     <div class="hero-links">
       {% for link in page.hero.links %}
-      <a class="hero-link" href="{{ link.url }}">{{ link.title }}</a>
+      <a class="hero-link" data-cms-bind="#hero.links[{forloop.index0}]" href="{{ link.url }}">{{ link.title }}</a>
       {% endfor %}
     </div>
     <div class="section-scroll">

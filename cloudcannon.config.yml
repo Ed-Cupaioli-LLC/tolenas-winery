@@ -14,20 +14,6 @@ collections_config:
           $.bg-image:
             label: Background Image
             comment: the background image that will appear in the hero
-      home-page:
-        path: .cloudcannon/schemas/home-page.md
-        name: Home Page
-        _enabled_editors:
-          - data
-        _inputs:
-          $.hero.links:
-            type: array
-            options:
-              structures: _structures.menu-nav
-          $.links:
-            type: array
-            options:
-              structures: _structures.home-page-links
       trade-media-page:
         path: .cloudcannon/schemas/trade-media-page.md
         name: Trade & Media Page
@@ -105,6 +91,10 @@ _structures:
           title: ''
           image: null
           url: ''
+        _inputs:
+          image-alt: 
+            comment: 'Descriptive text for your image that is required for accessibility.'  
+
   trade-media-page-logos:
     values:
       - value:
@@ -267,3 +257,19 @@ _structures:
 _inputs:
   template:
     hidden: true
+  nav_class: 
+    hidden: true
+  css: 
+    hidden: true
+  content-id: 
+    hidden: true
+  slick: 
+    hidden: true
+  scripts: 
+    hidden: true
+  title: 
+    comment: 'The title for your page used in the CMS and social media sharing.'
+  permalink: 
+    comment: 'The URL path to your page. start and end with forward slashes, eg /about/.'  
+  hero: 
+    comment: 'The title section of your page.'
