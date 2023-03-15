@@ -139,10 +139,10 @@ sections:
 <section id="visit-content">
   <div class="inner-section">
     {% for section in page.sections %}
-    <div id="{{ section.title | slugify }}" class="content-section {% if forloop.first %}active{% endif %}">
+    <div data-cms-bind="#section[{{ forloop.index0 }}]" id="{{ section.title | slugify }}" class="content-section {% if forloop.first %}active{% endif %}">
       {% assign contentIndex = forloop.index0 %}
       {% for content in section.content %}
-      <div data-cms-bind="#section[{{ contentIndex }}].content[{{forloop.index0 }}]" class="content-block {% if content.map == true %}map{% endif %}">
+      <div class="content-block {% if content.map == true %}map{% endif %}">
         <div class="image-col">
           <img  class="block-image" src="{{ content.image.src }}" alt="{{ content.image.alt }}"/>
         </div>
