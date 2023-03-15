@@ -189,12 +189,13 @@ _structures:
           text: ''
           image: null
         _inputs:
-          image: 
-            label: 'Menu Image' 
-            comment: 'Background image that will appear in the right-hand menu.'
-          text:
+          $.title: 
             label: 'Menu Title'
             comment: 'Title text that appears in the right-hand menu.'
+          $.image: 
+            label: 'Menu Image' 
+            comment: 'Background image that will appear in the right-hand menu.'
+          content.text:
             type: markdown
           content.map: 
             hidden: true
