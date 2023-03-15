@@ -14,16 +14,6 @@ collections_config:
           $.bg-image:
             label: Background Image
             comment: the background image that will appear in the hero
-      visit-page:
-        path: .cloudcannon/schemas/visit-page.md
-        name: Visit Page
-        _enabled_editors:
-          - data
-        _inputs:
-          $.sections:
-            type: array
-            options:
-              structures: _structures.visit-page-sections
 collection_groups:
   - heading: Content
     collections:
@@ -199,8 +189,20 @@ _structures:
           text: ''
           image: null
         _inputs:
+          image: 
+            label: 'Menu Image' 
+            comment: 'Background image that will appear in the right-hand menu.'
           text:
+            label: 'Menu Title'
+            comment: 'Title text that appears in the right-hand menu.'
             type: markdown
+          content.map: 
+            hidden: true
+          content.image.src: 
+            type: image
+            label: Image
+          content.image.alt:
+            comment: 'Descriptive text of the image required for accessibility.'  
   visit-page-sections:
     values:
       - value:
