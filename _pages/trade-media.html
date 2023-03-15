@@ -1,4 +1,44 @@
 ---
+_enabled_editors:
+  - visual
+  - data
+_inputs:
+  $.title:
+    comment: title of the page that appears in the hero
+  $.bg-image:
+    label: background image
+    comment: background image that appears in the hero
+  $.contact:
+    type: markdown
+    comment: >-
+      the paragraph about contact information that appears below the
+      hero
+  $.brand-assets.logos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-logos
+  $.brand-assets.photos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-photos
+  $.brand-assets.bios:
+    type: array
+    options:
+      structures: _structures.trade-media-page-bios
+  $.brand-assets.videos:
+    type: array
+    options:
+      structures: _structures.trade-media-page-videos
+  $.wine-portfolio.wines:
+    type: array
+    comment: use the add item button to add new wines
+    options:
+      structures: _structures.trade-media-page-wines
+  $.newsroom.stories:
+    type: array
+    comment: Add and order multiple stories here. Select the add item button
+    options:
+      structures: _structures.trade-media-page-stories
 title: Trade & Media
 permalink: /trade-media/
 bg-image: /img/grapes-bg.jpg
