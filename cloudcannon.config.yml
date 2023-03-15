@@ -1,0 +1,269 @@
+collections_config:
+  pages:
+    name: Pages
+    path: _pages
+    schemas:
+      page:
+        path: .cloudcannon/schemas/page.md
+        name: Page
+        _enabled_editors:
+          - content
+        _inputs:
+          $.title:
+            comment: The page title that will appear in the hero
+          $.bg-image:
+            label: Background Image
+            comment: the background image that will appear in the hero
+      home-page:
+        path: .cloudcannon/schemas/home-page.md
+        name: Home Page
+        _enabled_editors:
+          - data
+        _inputs:
+          $.hero.links:
+            type: array
+            options:
+              structures: _structures.menu-nav
+          $.links:
+            type: array
+            options:
+              structures: _structures.home-page-links
+      trade-media-page:
+        path: .cloudcannon/schemas/trade-media-page.md
+        name: Trade & Media Page
+        _enabled_editors:
+          - data
+        _inputs:
+          $.title:
+            comment: title of the page that appears in the hero
+          $.bg-image:
+            label: background image
+            comment: background image that appears in the hero
+          $.contact:
+            type: markdown
+            comment: >-
+              the paragraph about contact information that appears below the
+              hero
+          $.brand-assets.logos:
+            type: array
+            options:
+              structures: _structures.trade-media-page-logos
+          $.brand-assets.photos:
+            type: array
+            options:
+              structures: _structures.trade-media-page-photos
+          $.brand-assets.bios:
+            type: array
+            options:
+              structures: _structures.trade-media-page-bios
+          $.brand-assets.videos:
+            type: array
+            options:
+              structures: _structures.trade-media-page-videos
+          $.wine-portfolio.wines:
+            type: array
+            comment: use the add item button to add new wines
+            options:
+              structures: _structures.trade-media-page-wines
+          $.newsroom.stories:
+            type: array
+            comment: Add and order multiple stories here. Select the add item button
+            options:
+              structures: _structures.trade-media-page-stories
+      visit-page:
+        path: .cloudcannon/schemas/visit-page.md
+        name: Visit Page
+        _enabled_editors:
+          - data
+        _inputs:
+          $.sections:
+            type: array
+            options:
+              structures: _structures.visit-page-sections
+collection_groups:
+  - heading: Content
+    collections:
+      - pages
+paths:
+  static: ''
+  uploads: img
+_structures:
+  menu-nav:
+    values:
+      - value:
+          title: ''
+          url: ''
+  menu-social:
+    values:
+      - value:
+          title: ''
+          icon: ''
+          url: ''
+  home-page-links:
+    values:
+      - value:
+          title: ''
+          image: null
+          url: ''
+  trade-media-page-logos:
+    values:
+      - value:
+          title: ''
+          images: []
+        _inputs:
+          title:
+            comment: title text that appears below the logo image
+          images[*]:
+            type: image
+          images:
+            type: array
+            comment: >-
+              assets for the logo. always put png first, then jpg for the
+              formats. the png will be displayed on the page
+  trade-media-page-photos:
+    values:
+      - value:
+          title: ''
+          image:
+            original: null
+            thumb: null
+        _inputs:
+          title:
+            comment: text that appears below the photo
+          image.original:
+            type: file
+            comment: 'original photo sized at a 1280px max width. '
+          image.thumb:
+            type: file
+            comment: >-
+              Thumbnail photo that displays on the page with a 251px width and
+              272 px height. 
+  trade-media-page-bios:
+    values:
+      - value:
+          name: ''
+          title: ''
+          link: null
+        _inputs:
+          name:
+            comment: name for each bio
+          title:
+            comment: >-
+              the position title for each person. optional if bio isn't of a
+              person
+          link:
+            type: file
+            label: File
+            comment: file upload for the PDF of the bio
+  trade-media-page-videos:
+    values:
+      - value:
+          title: ''
+          id: ''
+        _inputs:
+          title:
+            comment: Title text that appears below the video thumnail
+          id:
+            label: YouTube Video ID
+            comment: >-
+              Get the youtube video ID by opening the video in youtube and find
+              the 11 character code at the end of the link. Ex)
+              https://www.youtube.com/watch?v=<strong>tP6bb6E81OQ<br>tP6bb6E81OQ
+              </strong> is the ID
+  trade-media-page-tech-sheet:
+    values:
+      - value:
+          link: null
+          title: ''
+        _inputs:
+          link:
+            type: file
+            label: File
+            comment: File upload for the tech sheet
+          title:
+            comment: >-
+              Download link title for the tech sheet. Follow this naming
+              convention: [YEAR] TS
+  trade-media-page-wines:
+    values:
+      - value:
+          title: ''
+          image: null
+          tech-sheet: []
+          bottle-shot: []
+          front-label: []
+          tastry: []
+        _inputs:
+          title:
+            comment: name of the wine
+          image:
+            comment: >-
+              image of the wine. each image is sized at 210px width and  388px
+              height. 
+          tech-sheet:
+            type: array
+            comment: 'file and link title for tech sheet. multiple sheets are possible. '
+            options:
+              structures: _structures.trade-media-page-tech-sheet
+          bottle-shot:
+            type: array
+            comment: >-
+              bottle shot image file and link title. multiple bottle shots are
+              possible. 
+            options:
+              structures: _structures.trade-media-page-tech-sheet
+          front-label:
+            type: array
+            comment: >-
+              images and link titles for the front labels. multiple entries are
+              possible. 
+            options:
+              structures: _structures.trade-media-page-tech-sheet
+          tastry:
+            type: array
+            comment: file and link titles for the tastry sheets
+            options:
+              structures: _structures.trade-media-page-tech-sheet
+  trade-media-page-stories:
+    values:
+      - value:
+          title: ''
+          outlet: ''
+          link: ''
+          date: ''
+        _inputs:
+          title:
+            comment: Title of the story
+          outlet:
+            comment: The media outlet that ran the story
+          link:
+            type: textarea
+            comment: Link to the story
+          date:
+            type: text
+            comment: >-
+              The date of the story release. Use the following naming
+              convention: [MONTH] [YEAR]. Ex) November 2020
+  visit-page-content:
+    values:
+      - value:
+          title: ''
+          text: ''
+          image: null
+        _inputs:
+          text:
+            type: markdown
+  visit-page-sections:
+    values:
+      - value:
+          title: ''
+          image: null
+          content: []
+        _inputs:
+          content:
+            type: array
+            options:
+              structures: _structures.visit-page-content
+_inputs:
+  template:
+    hidden: true

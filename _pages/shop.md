@@ -1,4 +1,5 @@
 ---
+_schema: page
 permalink: "/shop/"
 layout: page
 css: shop

@@ -1,4 +1,5 @@
 ---
+_schema: page
 layout: page
 permalink: "/story/"
 title: Story
