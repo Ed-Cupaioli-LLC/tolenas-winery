@@ -63,7 +63,7 @@ links:
 </section>
 <section id="product-section" data-collection="{{ page.products.collection-slug }}">
   <div class="inner-section">
-    <h2>{{ page.products.title }}</h2>
+    <h2 data-cms-bind="#products.title">{{ page.products.title }}</h2>
     <div id="product-slider">
       
     </div>
@@ -73,7 +73,7 @@ links:
   <div class="links-grid">
     {% for link in page.links %}
     <div class="link-col">
-      <a class="link" href="{{link.url}}" >
+      <a class="link" data-cms-bind="#links[{{ forloop.index0 }}]" href="{{link.url}}" >
         <h1 class="link-title">{{ link.title }}</h1>
         <img src="{{ link.image }}" class="link-image" alt="{{ link.image-alt }}"/>
       </a>
