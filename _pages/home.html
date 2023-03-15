@@ -53,7 +53,7 @@ links:
     <h1 class="hero-title" data-cms-bind="#hero.title">{{ page.hero.title }}</h1>
     <div class="hero-links">
       {% for link in page.hero.links %}
-      <a class="hero-link" data-cms-bind="#hero.links[{forloop.index0}].title" href="{{ link.url }}">{{ link.title }}</a>
+      <a class="hero-link" data-cms-bind="#hero.links[{{forloop.index0}}]" href="{{ link.url }}">{{ link.title }}</a>
       {% endfor %}
     </div>
     <div class="section-scroll">
