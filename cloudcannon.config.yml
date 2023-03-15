@@ -189,20 +189,14 @@ _structures:
           text: ''
           image: null
         _inputs:
-          $.title: 
-            label: 'Menu Title'
-            comment: 'Title text that appears in the right-hand menu.'
-          $.image: 
-            label: 'Menu Image' 
-            comment: 'Background image that will appear in the right-hand menu.'
-          content.text:
+          text:
             type: markdown
-          content.map: 
+          map: 
             hidden: true
-          content.image.src: 
+          image.src: 
             type: image
-            label: Image
-          content.image.alt:
+            label: 'Image'
+          image.alt:
             comment: 'Descriptive text of the image required for accessibility.'  
   visit-page-sections:
     values:
