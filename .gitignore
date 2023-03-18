@@ -7,5 +7,6 @@ _site
 node_modules/
 css/**.css.map
 css/**.min.css.map
-
+package.json
+package-lock.json
 
