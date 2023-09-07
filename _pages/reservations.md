@@ -1,7 +1,7 @@
 ---
 _schema: page
 title: Reservations
-bg-image: /img/experience.jpg
+bg-image: /img/7s4a2250-credit-heather-carollo-3.jpg
 ---
 ## Make a reservation
 
