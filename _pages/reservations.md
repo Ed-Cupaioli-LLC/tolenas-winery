@@ -1,7 +1,7 @@
 ---
 _schema: page
 title: Reservations
-bg-image: /img/7s4a2250-credit-heather-carollo-3.jpg
+bg-image: /img/visit-tolenas-winery.jpg
 ---
 ## Make a reservation
 
