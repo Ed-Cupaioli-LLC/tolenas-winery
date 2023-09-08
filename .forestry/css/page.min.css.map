@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAEA,IAAK;EACH,WAAW,ECiBA,IAAI;EDfb,4BAAe;IACb,SAAS,EAAE,KAAK;IAChB,MAAM,EAAE,IAAI;EAEd,kCAAM;IACJ,YAAY,EAAE,GAAG;EAGjB,2BAAY;IACV,WAAW,EAAE,IAAI;IACjB,eAAe,EAAE,SAAS",
+"sources": ["../scss/page.scss","../scss/_vars.scss"],
+"names": [],
+"file": "page.min.css"
+}

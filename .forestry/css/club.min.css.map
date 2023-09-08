@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAGE,cAAG;EACD,OAAO,EAAE,IAAI;AAGb,6CAAoB;EAClB,eAAe,EAAE,MAAM;EACvB,wEAA2B;IACzB,OAAO,EAAE,IAAI",
+"sources": ["../scss/club.scss"],
+"names": [],
+"file": "club.min.css"
+}
