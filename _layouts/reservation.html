@@ -1,0 +1,14 @@
+---
+layout: default
+css: page
+content-id: page
+---
+{% if page.bg-image %}
+{% include hero.html %}
+{% endif %}
+<section id="content">
+  <div class="inner-section">
+    {{ content | markdownify }}
+    <a class="btn" href="{{ page.reservation-link }}">Make a Reservation</a>
+  </div>
+</section>

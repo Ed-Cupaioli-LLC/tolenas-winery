@@ -5,7 +5,7 @@ nav:
 - title: Shop
   url: "/shop/"
 - title: Reservations
-  url: "/reservation/"
+  url: "/reservations/"
 - title: Club
   url: "/club/"
 - title: Visit
