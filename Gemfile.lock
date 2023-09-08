@@ -70,7 +70,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
-  jekyll (= 4.3.2)
+  jekyll (>= 3.8.5)
   jekyll-liquify
   jekyll-sitemap
   webrick
