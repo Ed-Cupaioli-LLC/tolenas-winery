@@ -1,6 +1,7 @@
 ---
 _schema: page
 title: Reservations
+permalink: /reservation/
 bg-image: /img/visit-tolenas-winery.jpg
 ---
 ## Make a reservation

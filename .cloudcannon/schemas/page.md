@@ -1,4 +1,5 @@
 ---
 title: ''
 bg-image:
+permalink: ''
 ---
