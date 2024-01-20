@@ -3,6 +3,7 @@ _schema: page
 title: Reservations
 bg-image: /img/visit-tolenas-winery.jpg
 permalink: /reservation/
+layout: 'reservation'
 ---
 ## Make a reservation
 
