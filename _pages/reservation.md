@@ -28,4 +28,4 @@ Large Parties (6+ people)
 
 \*We are pet friendly but dogs must be well behaved and remain on leash at all times
 
-\*Please let us know about special accommodations or needs within your party at the time of your reservation.&nbsp;
+\*Please let us know about special accommodations or needs within your party at the time of your reservation.&nbsp; &nbsp;
