@@ -59,4 +59,7 @@ defaults:
   values:
     layout: redirect
     sitemap: false  
-      
+- scope: 
+    path: '_pages/reservation.md'
+  values:
+    layout: reservation        
