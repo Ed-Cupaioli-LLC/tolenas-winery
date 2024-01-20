@@ -16,7 +16,8 @@ collections_config:
             comment: the background image that will appear in the hero
           $.permalink:
             label: Path
-            comment: 'The URL path to your page. start and end with forward slashes, eg /about/. Some pages depend on specific paths to work properly with Commerce7. Do not change unless there are no widgets on the page.'    
+            comment: 'The URL path to your page. start and end with forward slashes, eg /about/. Some pages depend on specific paths to work properly with Commerce7. Do not change unless there are no widgets on the page.'
+          $.layout:   
 collection_groups:
   - heading: Content
     collections:
