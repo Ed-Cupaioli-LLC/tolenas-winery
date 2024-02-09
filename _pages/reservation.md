@@ -3,10 +3,11 @@ _schema: page
 title: Reservations
 bg-image: /img/visit-tolenas-winery.jpg
 permalink: /reservation/
+layout: ''
 ---
 ## Make a reservation
 
-Tolenas is open for tastings Friday, Saturday, Sunday and Monday. We are open for tastings between 11am and 4pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below. \*\*We are currently having a booking engine issue, please use the chat feature on the website or call 707-372-1434 to book\*\*
+Tolenas is open for tastings Friday, Saturday, Sunday and Monday. We are open for tastings between 11am and 4pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below.&nbsp;
 
 With your private tasting enjoy:
 
