@@ -7,7 +7,7 @@ layout: widget-page
 ---
 ## Make a reservation
 
-Tolenas is open for tastings Friday, Saturday, Sunday and Monday. We are open for tastings between 11am and 4pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below.&nbsp; &nbsp;
+Tolenas is open for tastings Friday, Saturday, Sunday and Monday. We are open for tastings between 11am and 4pm. Reservations are highly recommended for all parties and are REQUIRED for parties of 6 or more people. Check for reservation availability and book your appointment below.&nbsp;
 
 With your private tasting enjoy:
 
