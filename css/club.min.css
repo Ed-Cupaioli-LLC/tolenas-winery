@@ -1,1 +1,11 @@
-#c7-content h1{display:none}#c7-content .c7-club-list .c7-club-list__item{-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}#c7-content .c7-club-list .c7-club-list__item .c7-club-list__item__image{display:none}
+#c7-content h1 {
+  display: none;
+}
+#c7-content .c7-club-list .c7-club-list__item {
+  justify-content: center;
+}
+#c7-content .c7-club-list .c7-club-list__item .c7-club-list__item__image {
+  display: none;
+}
+
+/*# sourceMappingURL=club.min.css.map */
