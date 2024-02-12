@@ -3,7 +3,6 @@ title: Reservations
 bg-image: /img/visit-tolenas-winery.jpg
 permalink: /reservation/
 layout: widget-page
-foo: bar
 ---
 ## Make a reservation
 
