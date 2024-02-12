@@ -1,5 +1,4 @@
 ---
-_schema: page
 layout: story
 permalink: "/story/"
 title: Story
@@ -23,7 +22,7 @@ sections:
 - title: SO WHY TOLENAS?
   text: >-
     Bordered by mountains and characterized by a cool coastal breeze, the wind-blown Suisun Valley is home. The name Tolenas is a tribute to the pioneers of Suisun Valley and serves to memorialize the contributions of early farmers to our region. Our grapes are grown on the slopes of the original Rancho Tolenas, the Mexican Land Grant spanning Napa and Solano Counties. In 1840, Rancho Tolenas was granted to Jose Francisco Armijo who planted his roots here, farming the land with his children. Almost 200 years later, we celebrate the kinship between the early Suisun Valley settlers and our family, as we continue an agricultural tradition on the same land.
-    
+
 
     Tolenas Winery was built on a foundation of family— with a passion for this land which has abundantly provided for generations of California winemakers. Our winemaking philosophy centers the vineyard and fruits as the focus, abstaining from disturbing the vines with chemicals or unnecessary additives. Our products reflect a commitment to both protecting the land and preserving the integrity of our wines. While making wines like this is risky, we wouldn’t have it any other way.
   button: 

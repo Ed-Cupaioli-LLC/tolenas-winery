@@ -17,8 +17,6 @@ collections_config:
           $.permalink:
             label: Path
             comment: 'The URL path to your page. start and end with forward slashes, eg /about/. Some pages depend on specific paths to work properly with Commerce7. Do not change unless there are no widgets on the page.'
-          $.layout:   
-            type: 'text'
 collection_groups:
   - heading: Content
     collections:

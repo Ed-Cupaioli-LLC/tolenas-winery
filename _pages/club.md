@@ -1,9 +1,9 @@
 ---
-_schema: page
 title: Club
 bg-image: /img/club-bannr.jpg
 permalink: /club/
 layout: widget-page
+css: club
 ---
 ## JOIN OUR WINE CLUB
 
