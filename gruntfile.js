@@ -62,7 +62,7 @@ module.exports = function(grunt) {
           require('csswring')()
         ]
       },
-      mincss: {
+      dist: {
         files: [{
           expand: true,
           cwd: 'css/',

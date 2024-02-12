@@ -1,5 +1,7 @@
 ---
 _schema: page
+_enabled-editors: 
+  - data
 permalink: "/shop/"
 layout: page
 css: shop

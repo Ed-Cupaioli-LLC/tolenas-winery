@@ -235,3 +235,5 @@ _inputs:
     comment: 'The URL path to your page. start and end with forward slashes, eg /about/.'  
   hero: 
     comment: 'The title section of your page.'
+  schema: 
+    hidden: true  

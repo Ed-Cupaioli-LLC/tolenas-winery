@@ -1,16 +1,1 @@
-main {
-  padding-top: 88px;
-}
-main #content .inner-section {
-  max-width: 950px;
-  margin: auto;
-}
-main #content ul, main #content ol {
-  padding-left: 1em;
-}
-main #content p a:not(.btn) {
-  font-weight: bold;
-  text-decoration: underline;
-}
-
-/*# sourceMappingURL=page.min.css.map */
+main{padding-top:88px}main #content .inner-section{max-width:950px;margin:auto}main #content ul,main #content ol{padding-left:1em}main #content p a:not(.btn){font-weight:700;text-decoration:underline}

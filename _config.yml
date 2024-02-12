@@ -62,4 +62,10 @@ defaults:
 - scope: 
     path: '_pages/reservation.md'
   values:
-    layout: reservation        
+    layout: widget-page
+    permalink: /reservation/
+- scope: 
+    path: '_pages/club.md'
+  values:
+    layout: widget-page
+    permalink: /club/

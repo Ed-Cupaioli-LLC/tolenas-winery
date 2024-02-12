@@ -1,5 +1,5 @@
 ---
-schema: page
+_schema: page
 permalink: "/terms/"
 layout: page
 title: Terms

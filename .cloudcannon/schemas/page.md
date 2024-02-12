@@ -2,5 +2,5 @@
 title: ''
 bg-image:
 permalink: ''
-layout: ''
+layout: page
 ---

@@ -4,6 +4,7 @@ permalink: "/club/"
 title: Club
 bg-image: "/img/club-bannr.jpg"
 css: club
+layout: widget-page
 ---
 ## JOIN OUR WINE CLUB
 
@@ -12,5 +13,3 @@ As a Tolenas wine club member you’ll be a genuine Suisun Valley insider. As a 
 Our tasting room is easily accessible just off I-80 from both Sacramento and the Bay Area. It makes for a quick day trip on quiet country roads to have a glass and a picnic.
 
 Once you register, you will be contacted directly with more details on our next wine club pickup event and how to receive your wine club welcome pack.
-
-<div id="c7-content"></div>
