@@ -3,7 +3,6 @@ _schema: page
 title: Reservations
 bg-image: /img/visit-tolenas-winery.jpg
 permalink: /reservation/
-layout: 'reservation'
 ---
 ## Make a reservation
 
@@ -29,4 +28,4 @@ Large Parties (6+ people)
 
 \*We are pet friendly but dogs must be well behaved and remain on leash at all times
 
-\*Please let us know about special accommodations or needs within your party at the time of your reservation.&nbsp; &nbsp;
+\*Please let us know about special accommodations or needs within your party at the time of your reservation.&nbsp; &nbsp;&nbsp;
