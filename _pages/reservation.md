@@ -10,7 +10,7 @@ Tolenas is open for tastings Friday, Saturday, Sunday and Monday. We are open fo
 
 With your private tasting enjoy:
 
-* A flight of our current release wines
+* A flight of our current release wines - typically 5 wines.
 * Personalized guided wine service by a member of the team
 * A private table for your party
 * The option to bring your own picnic to accompany our selections\*
