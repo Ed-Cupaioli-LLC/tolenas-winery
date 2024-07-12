@@ -1,0 +1,30 @@
+.email-signup {
+  background-color: $gold;
+  padding: 0.5rem 0;
+  .signup-body {
+    max-width: 410px;
+    margin: auto;
+    text-align: center;
+  }
+  
+  .form-title {
+    color: $black;
+    text-transform: uppercase;
+    text-align: center;
+    margin-bottom: 0.25rem;
+  }
+  .email-signup-form {
+    form {
+      padding: 0 !important;
+      & > div {
+        min-height: auto !important;
+      }
+      input[type="email"],input[type="email"]::placeholder {
+        font-family: $body_font !important;
+      }
+      input[type="email"] {
+        border-radius: 0 !important;
+      }
+    }
+  }
+ }
