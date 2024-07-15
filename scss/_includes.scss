@@ -22,6 +22,7 @@
     transform: translateY(0%);  
     z-index: 9999;
     opacity: 1;
+    overflow-y: scroll;
   }
   .gate-content {
     text-align: center;
