@@ -1,3 +1,4 @@
+@import "email-signup.scss";
 #age-gate {
   position: fixed;
   z-index: -1;
@@ -21,6 +22,7 @@
     transform: translateY(0%);  
     z-index: 9999;
     opacity: 1;
+    overflow-y: scroll;
   }
   .gate-content {
     text-align: center;
@@ -92,123 +94,6 @@
     height: 100%;
   }
 }
-
-.email-signup {
-  background-color: $gold;
-  padding: 0.5rem 0;
-  .signup-body {
-    max-width: 410px;
-    margin: auto;
-    text-align: center;
-  }
-  
-  .form-title {
-    color: $black;
-    text-transform: uppercase;
-    text-align: center;
-    margin-bottom: 0.25rem;
-  }
-  .c7-subscribe {
-    max-width: $size-medium;
-    margin: auto;
-    &__success-message {
-      text-align: center;
-      h3 {
-        color: $black;
-        margin-bottom: 0.5rem;
-      }
-      p {
-        margin-bottom: 0;
-      }
-    }
-    
-    .c7-form {
-      margin: auto;
-      .c7-message--alert-error {
-        border-radius: 0;
-      }
-      &__group {
-        display: flex;
-        gap: 1rem;
-        align-items: center;
-        justify-content: center;
-        flex-flow: row nowrap;
-        
-        .c7-btn--primary {
-          background-color: $white;
-          color: $black;
-          font-size: 14px;
-          line-height: 1em;
-          padding: 0.5rem 1rem;
-          height: 37px;
-          margin: 0;
-          &:hover {
-            background-color: $black;
-            color: $white;
-          }
-          &:before {
-            display: block;
-            content: 'Sign up';
-          }
-          span {
-            display: none;
-          }
-        }
-      }
-      &__error {
-        text-align: center;
-        width: 100%;
-        background-color: var(--c7-error-bg);
-        color: $black;
-        padding: 0;
-        margin: 0.5rem auto 0;
-        max-width: 200px;
-      }
-      &__field {
-        display: inline-flex;
-        align-items: center;
-        gap: 0 1rem;
-        margin-bottom: 0;
-        justify-content: flex-end;
-        flex-flow: row wrap;
-        
-        @include bp-small {
-          justify-content: center;
-          flex: 0 1 auto;
-        }
-        label {
-          color: $black;
-          text-transform: uppercase;
-          font-size: 1rem;
-          padding: 0;
-          line-height: normal;
-          &::after {
-            display: none;
-          }
-        }
-        input {
-          font-size: 14px;
-          padding: 0.5rem 1rem;
-          border: none;
-          border-radius: 0;
-          min-width: 250px;
-          width: auto;
-          height: auto;
-          line-height: normal;
-          @include bp-small {
-            min-width: 0px;
-          }
-          &::placeholder {
-            content: 'Email';
-            text-transform: uppercase;
-            font-weight: inherit;
-          }
-        }
-        
-      }
-    }
-  }
- }
 //hero
  #hero {
   background-position: center;
