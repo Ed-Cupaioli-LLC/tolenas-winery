@@ -1,7 +1,7 @@
 $(function () {
   $.ajax({
     // url: "https://feeds.behold.so/ebeDTCCi9bfMrQyh0MxC",
-    url: "https://feeds.behold.so/5DHvQ7WYApkMcA2zPHM7",
+    url: "https://feeds.behold.so/uFUReCIEj3OAoxFFxqzs",
     dataType: 'json',
     success: function(data) {
       var igFeed = data.posts;
