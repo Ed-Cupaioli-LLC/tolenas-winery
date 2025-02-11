@@ -1,10 +1,10 @@
 $(function () {
   $.ajax({
-    url: "https://feeds.behold.so/ebeDTCCi9bfMrQyh0MxC",
+    // url: "https://feeds.behold.so/ebeDTCCi9bfMrQyh0MxC",
+    url: "https://feeds.behold.so/5DHvQ7WYApkMcA2zPHM7",
     dataType: 'json',
     success: function(data) {
-      var igFeed = data;
-      console.log(data);
+      var igFeed = data.posts;
       $(igFeed).each(function(i,post) {
         var mediaType = post.mediaType;
         var postLink = post.permalink;
@@ -53,8 +53,11 @@ $(function () {
   });
   $(".close-embed").click(function () {
     $(".post-embed-container,body,html").removeClass("active");
-    $(".insta-image").attr("src", "");
-    $(".insta-caption").html("");
-    $(".insta-link").attr("href", "");
+    setTimeout(() => {
+      $(".insta-image").attr("src", "");
+      $(".insta-caption").html("");
+      $(".insta-link").attr("href", "");
+    }, 700);
+    
   });
 });
